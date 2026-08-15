@@ -11,27 +11,35 @@ body {
     color: #d7e0e3;
     font-family: 'Space Mono', monospace;
     line-height: 1.7;
-    padding-top: 60px; /* Compensación para que la barra fija no tape el inicio */
+
+    /* Compensación para el header fixed */
+    padding-top: 58px;
 }
 
 /* ===================================================
-   CABECERA FIJA (FIXED HEADER)
+   CABECERA FIJA / STICKY
    =================================================== */
+
 header {
-    position: fixed;            /* Fijo permanente en la pantalla */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;                /* Ocupa todo el ancho */
-    z-index: 1000;              /* Por encima de todo el contenido */
-    background-color: #080b0d;  /* Fondo opaco del mismo color de la página */
+    width: 100%;
+    z-index: 1000;
+
     border-bottom: 1px solid #27343a;
+    background: #080b0d;
+
     padding: 20px 7%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     font-family: 'Share Tech Mono', monospace;
     font-size: 13px;
     letter-spacing: 2px;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -43,148 +51,238 @@ header {
     color: #6d858c;
 }
 
+/* ===================================================
+   CONTENIDO PRINCIPAL
+   =================================================== */
+
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    width: min(1000px, 88%);
+    margin: auto;
 }
 
 .hero {
+    padding: 110px 0 70px;
     border-bottom: 1px solid #27343a;
-    padding-bottom: 60px;
-    margin-bottom: 60px;
 }
 
 .classification {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
-    color: #aebdc1;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+    color: #728890;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
 }
 
 h1 {
-    font-size: 48px;
-    color: #ffffff;
-    letter-spacing: 4px;
-    font-weight: 700;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: clamp(60px, 12vw, 130px);
+    letter-spacing: 10px;
+    line-height: 1;
 }
 
 .subtitle {
-    font-size: 14px;
+    margin-top: 20px;
     color: #82969c;
-    margin-top: 10px;
+    letter-spacing: 4px;
+    font-size: 14px;
 }
 
 .serial {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px;
-    color: #6d858c;
-    margin-top: 25px;
+    margin-top: 35px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #ffffff;
 }
 
-.section-title {
+/* ===================================================
+   FOTO PRINCIPAL
+   =================================================== */
+
+.photo {
+    margin: 70px 0;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+    border: 1px solid #27343a;
+    filter: grayscale(15%);
+    transition: 0.3s;
+}
+
+.photo img:hover {
+    filter: grayscale(0%);
+}
+
+/* ===================================================
+   SECCIONES
+   =================================================== */
+
+section {
+    margin-bottom: 100px;
+}
+
+h2 {
     font-family: 'Share Tech Mono', monospace;
     font-size: 18px;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
     color: #ffffff;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
-    border-left: 3px solid #ffffff;
-    padding-left: 15px;
 }
 
-.grid {
+/* ===================================================
+   DATOS TÉCNICOS
+   =================================================== */
+
+.data-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 80px;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid #27343a;
+    border-left: 1px solid #27343a;
+}
+
+.data-grid div {
+    padding: 25px;
+    border-right: 1px solid #27343a;
+    border-bottom: 1px solid #27343a;
+}
+
+.data-grid span {
+    display: block;
+    color: #687b82;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.data-grid strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* ===================================================
+   INVENTARIO Y TARJETAS DE GUITARRAS
+   =================================================== */
+
+.guitar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
 .guitar-card {
     background: #0d1216;
     border: 1px solid #27343a;
-    padding: 25px;
-    transition: all 0.2s ease;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: all 0.3s ease;
 }
 
 .guitar-card:hover {
-    border-color: #52666d;
-    transform: translateY(-3px);
+    border-color: #d7e0e3;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.guitar-card .serial {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #6d858c;
+    font-size: 11px;
+    letter-spacing: 2px;
 }
 
 .guitar-card img {
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
-    margin: 15px 0;
-    filter: grayscale(20%) contrast(110%);
-    border: 1px solid #1a2328;
+
+    border: 1px solid #27343a;
+    margin: 12px 0;
+
+    background-color: #080b0d;
+
+    filter: grayscale(20%);
+    transition: 0.3s;
+}
+
+.guitar-card:hover img {
+    filter: grayscale(0%);
+    border-color: #6d858c;
 }
 
 .guitar-card h3 {
+    font-family: 'Share Tech Mono', monospace;
     font-size: 18px;
+    letter-spacing: 2px;
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .guitar-card p {
-    font-size: 13px;
+    font-size: 12px;
     color: #82969c;
-}
-
-.guitar-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+    line-height: 1.4;
 }
 
 .guitar-card .status {
     margin-top: 15px;
-    font-family: 'Share Tech Mono', monospace;
     font-size: 11px;
+    letter-spacing: 1.5px;
+    color: #6d858c;
+
+    border-top: 1px dashed #27343a;
+    padding-top: 10px;
+}
+
+.guitar-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===================================================
+   HISTORIA
+   =================================================== */
+
+.history p {
+    max-width: 800px;
+    margin-bottom: 25px;
     color: #aebdc1;
 }
 
-.specs-list {
+/* ===================================================
+   MODIFICACIONES
+   =================================================== */
+
+.modifications ul {
     list-style: none;
-    margin: 40px 0;
 }
 
-.specs-list li {
-    padding: 12px 0;
-    border-bottom: 1px dashed #1a2328;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.specs-list li span {
-    color: #82969c;
-}
-
-.terminal-box {
-    background: #030506;
-    border: 1px solid #1a2328;
-    padding: 25px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 13px;
+.modifications li {
+    border-bottom: 1px solid #27343a;
+    padding: 18px 0;
     color: #aebdc1;
-    margin-top: 40px;
 }
 
-.terminal-box p {
-    margin-bottom: 8px;
-}
-
-.terminal-box p::before {
+.modifications li::before {
     content: ">";
     margin-right: 15px;
     color: #ffffff;
 }
 
+/* ===================================================
+   CRONOLOGÍA / EVENTOS
+   =================================================== */
+
 .event {
     display: grid;
     grid-template-columns: 120px 1fr;
+
     border-top: 1px solid #27343a;
     padding: 30px 0;
 }
@@ -206,6 +304,10 @@ h1 {
     font-size: 14px;
 }
 
+/* ===================================================
+   IMPORTANCIA
+   =================================================== */
+
 .importance {
     border: 1px solid #27343a;
     padding: 40px;
@@ -224,11 +326,64 @@ h1 {
     margin-top: 40px;
 }
 
+/* ===================================================
+   FOOTER
+   =================================================== */
+
 footer {
     border-top: 1px solid #27343a;
-    padding: 40px 0;
-    text-align: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 12px;
-    color: #6d858c;
+    padding: 35px 7%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #62747a;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* ===================================================
+   RESPONSIVE — MÓVIL
+   =================================================== */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /*
+       El header móvil ocupa más altura porque ahora
+       tiene dos líneas. Aumentamos la compensación.
+    */
+    body {
+        padding-top: 90px;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .importance {
+        padding: 25px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .guitar-grid {
+        grid-template-columns: 1fr;
+    }
 }

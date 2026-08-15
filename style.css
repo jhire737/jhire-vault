@@ -13,7 +13,14 @@ body {
     line-height: 1.7;
 }
 
+/* ===================================================
+   CABECERA FIJA (STICKY HEADER)
+   =================================================== */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #080b0d;
     border-bottom: 1px solid #27343a;
     padding: 20px 7%;
     display: flex;
@@ -22,6 +29,7 @@ header {
     font-family: 'Share Tech Mono', monospace;
     font-size: 13px;
     letter-spacing: 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .system {
@@ -313,4 +321,4 @@ footer {
         grid-template-columns: 1fr;
     }
 
-} /* <- Aquí estaba faltando esta llave final */
+}

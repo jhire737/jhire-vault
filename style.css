@@ -1,389 +1,338 @@
+/* ===================================================
+   1. CONFIGURACIÓN Y FUENTES
+   =================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #080b0d;
-    color: #d7e0e3;
-    font-family: 'Space Mono', monospace;
-    line-height: 1.7;
-
-    /* Compensación para el header fixed */
-    padding-top: 58px;
+  background: #080b0d;
+  color: #d7e0e3;
+  font-family: 'Space Mono', monospace;
+  line-height: 1.7;
 }
 
 /* ===================================================
-   CABECERA FIJA / STICKY
+   2. NAVEGACIÓN Y ENCABEZADO
    =================================================== */
-
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    border-bottom: 1px solid #27343a;
-    background: #080b0d;
-
-    padding: 20px 7%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 13px;
-    letter-spacing: 2px;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background-color: rgba(13, 17, 23, 0.95);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #27343a;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .system {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .status {
-    color: #6d858c;
+  color: #6d858c;
 }
 
 /* ===================================================
-   CONTENIDO PRINCIPAL
+   3. ESTRUCTURA PRINCIPAL Y HERO
    =================================================== */
-
 main {
-    width: min(1000px, 88%);
-    margin: auto;
+  width: min(1000px, 88%);
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 100px;
 }
 
 .hero {
-    padding: 110px 0 70px;
-    border-bottom: 1px solid #27343a;
+  padding: 110px 0 70px;
+  border-bottom: 1px solid #27343a;
 }
 
 .classification {
-    color: #728890;
-    font-size: 13px;
-    letter-spacing: 3px;
-    margin-bottom: 25px;
+  margin-bottom: 25px;
+  color: #728890;
+  font-size: 13px;
+  letter-spacing: 3px;
 }
 
 h1 {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: clamp(60px, 12vw, 130px);
-    letter-spacing: 10px;
-    line-height: 1;
-}
-
-.subtitle {
-    margin-top: 20px;
-    color: #82969c;
-    letter-spacing: 4px;
-    font-size: 14px;
-}
-
-.serial {
-    margin-top: 35px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #ffffff;
-}
-
-/* ===================================================
-   FOTO PRINCIPAL
-   =================================================== */
-
-.photo {
-    margin: 70px 0;
-}
-
-.photo img {
-    width: 100%;
-    display: block;
-    border: 1px solid #27343a;
-    filter: grayscale(15%);
-    transition: 0.3s;
-}
-
-.photo img:hover {
-    filter: grayscale(0%);
-}
-
-/* ===================================================
-   SECCIONES
-   =================================================== */
-
-section {
-    margin-bottom: 100px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: clamp(60px, 12vw, 130px);
+  line-height: 1;
+  letter-spacing: 10px;
 }
 
 h2 {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 18px;
-    letter-spacing: 4px;
-    margin-bottom: 35px;
-    color: #ffffff;
+  margin-bottom: 35px;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  color: #82969c;
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.serial {
+  margin-top: 35px;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 /* ===================================================
-   DATOS TÉCNICOS
+   4. ELEMENTOS MULTIMEDIA Y GRILLAS DE DATOS
    =================================================== */
+.photo {
+  margin: 70px 0;
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  border: 1px solid #27343a;
+  filter: grayscale(15%);
+  transition: filter 0.3s ease;
+}
+
+.photo img:hover {
+  filter: grayscale(0%);
+}
 
 .data-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    border-top: 1px solid #27343a;
-    border-left: 1px solid #27343a;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #27343a;
+  border-left: 1px solid #27343a;
 }
 
 .data-grid div {
-    padding: 25px;
-    border-right: 1px solid #27343a;
-    border-bottom: 1px solid #27343a;
+  padding: 25px;
+  border-right: 1px solid #27343a;
+  border-bottom: 1px solid #27343a;
 }
 
 .data-grid span {
-    display: block;
-    color: #687b82;
-    font-size: 11px;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
+  color: #687b82;
+  font-size: 11px;
+  letter-spacing: 2px;
 }
 
 .data-grid strong {
-    color: #ffffff;
-    font-size: 14px;
+  color: #ffffff;
+  font-size: 14px;
 }
 
 /* ===================================================
-   INVENTARIO Y TARJETAS DE GUITARRAS
+   5. INVENTARIO Y TARJETAS DE GUITARRAS
    =================================================== */
-
 .guitar-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
 }
 
 .guitar-card {
-    background: #0d1216;
-    border: 1px solid #27343a;
-    padding: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: #0d1216;
+  border: 1px solid #27343a;
+  transition: all 0.3s ease;
 }
 
 .guitar-card:hover {
-    border-color: #d7e0e3;
-    transform: translateY(-4px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.guitar-card .serial {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #6d858c;
-    font-size: 11px;
-    letter-spacing: 2px;
-}
-
-.guitar-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-
-    border: 1px solid #27343a;
-    margin: 12px 0;
-
-    background-color: #080b0d;
-
-    filter: grayscale(20%);
-    transition: 0.3s;
-}
-
-.guitar-card:hover img {
-    filter: grayscale(0%);
-    border-color: #6d858c;
-}
-
-.guitar-card h3 {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #ffffff;
-    margin-bottom: 6px;
-}
-
-.guitar-card p {
-    font-size: 12px;
-    color: #82969c;
-    line-height: 1.4;
-}
-
-.guitar-card .status {
-    margin-top: 15px;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    color: #6d858c;
-
-    border-top: 1px dashed #27343a;
-    padding-top: 10px;
+  border-color: #d7e0e3;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .guitar-card a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.guitar-card .serial {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #6d858c;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.guitar-card img {
+  width: 100%;
+  height: 180px;
+  margin: 12px 0;
+  background-color: #080b0d;
+  border: 1px solid #27343a;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease, border-color 0.3s ease;
+}
+
+.guitar-card:hover img {
+  border-color: #6d858c;
+  filter: grayscale(0%);
+}
+
+.guitar-card h3 {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.guitar-card p {
+  color: #82969c;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.guitar-card .status {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px dashed #27343a;
+  color: #6d858c;
+  font-size: 11px;
+  letter-spacing: 1.5px;
 }
 
 /* ===================================================
-   HISTORIA
+   6. HISTORIAL, MODIFICACIONES Y EVENTOS
    =================================================== */
-
 .history p {
-    max-width: 800px;
-    margin-bottom: 25px;
-    color: #aebdc1;
+  max-width: 800px;
+  margin-bottom: 25px;
+  color: #aebdc1;
 }
-
-/* ===================================================
-   MODIFICACIONES
-   =================================================== */
 
 .modifications ul {
-    list-style: none;
+  list-style: none;
 }
 
 .modifications li {
-    border-bottom: 1px solid #27343a;
-    padding: 18px 0;
-    color: #aebdc1;
+  padding: 18px 0;
+  border-bottom: 1px solid #27343a;
+  color: #aebdc1;
 }
 
 .modifications li::before {
-    content: ">";
-    margin-right: 15px;
-    color: #ffffff;
+  content: ">";
+  margin-right: 15px;
+  color: #ffffff;
 }
 
-/* ===================================================
-   CRONOLOGÍA / EVENTOS
-   =================================================== */
-
 .event {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-
-    border-top: 1px solid #27343a;
-    padding: 30px 0;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 30px 0;
+  border-top: 1px solid #27343a;
 }
 
 .year {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 25px;
-    color: #ffffff;
+  color: #ffffff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 25px;
 }
 
 .event h3 {
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 3px;
 }
 
 .event p {
-    color: #82969c;
-    font-size: 14px;
+  color: #82969c;
+  font-size: 14px;
 }
 
-/* ===================================================
-   IMPORTANCIA
-   =================================================== */
-
 .importance {
-    border: 1px solid #27343a;
-    padding: 40px;
+  padding: 40px;
+  border: 1px solid #27343a;
 }
 
 .importance p {
-    max-width: 800px;
-    margin-bottom: 20px;
-    color: #aebdc1;
+  max-width: 800px;
+  margin-bottom: 20px;
+  color: #aebdc1;
 }
 
 .quote {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 22px;
-    color: #ffffff !important;
-    margin-top: 40px;
+  margin-top: 40px;
+  color: #ffffff !important;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 22px;
 }
 
 /* ===================================================
-   FOOTER
+   7. PIE DE PÁGINA (FOOTER)
    =================================================== */
-
 footer {
-    border-top: 1px solid #27343a;
-    padding: 35px 7%;
-
-    display: flex;
-    justify-content: space-between;
-
-    color: #62747a;
-    font-size: 11px;
-    letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 7%;
+  border-top: 1px solid #27343a;
+  color: #62747a;
+  font-size: 11px;
+  letter-spacing: 2px;
 }
 
 /* ===================================================
-   RESPONSIVE — MÓVIL
+   8. ADAPTABILIDAD (RESPONSIVE - MÓVIL)
    =================================================== */
-
 @media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
+  .hero {
+    padding-top: 70px;
+  }
 
-    /*
-       El header móvil ocupa más altura porque ahora
-       tiene dos líneas. Aumentamos la compensación.
-    */
-    body {
-        padding-top: 90px;
-    }
+  .data-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .hero {
-        padding-top: 70px;
-    }
+  .guitar-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .data-grid {
-        grid-template-columns: 1fr;
-    }
+  .event {
+    grid-template-columns: 80px 1fr;
+  }
 
-    .event {
-        grid-template-columns: 80px 1fr;
-    }
+  .importance {
+    padding: 25px;
+  }
 
-    .importance {
-        padding: 25px;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .guitar-grid {
-        grid-template-columns: 1fr;
-    }
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

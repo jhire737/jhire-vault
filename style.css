@@ -1,8 +1,8 @@
 /* ===================================================
-   1. CONFIGURACIÓN Y FUENTES
+   1. CONFIGURACIÓN Y FUENTES FORMALES Y PESADAS
    =================================================== */
-/* Importamos los pesos 400 y 700 para ambas fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap');
+/* Importamos Orbitron (para títulos técnicos y formales) y Rajdhani / Roboto Mono */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Rajdhani:wght@600;700&family=Roboto+Mono:wght@600;700&display=swap');
 
 *,
 *::before,
@@ -15,10 +15,11 @@
 body {
   background: #080b0d;
   color: #d7e0e3;
-  font-family: 'Space Mono', monospace;
-  font-size: 15px; /* Aumentado ligeramente para mejor lectura */
-  font-weight: 400;
-  line-height: 1.7;
+  /* Roboto Mono da una apariencia técnica, sobria y muy seria */
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
 }
 
 /* ===================================================
@@ -31,24 +32,22 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 7%;
-  background-color: rgba(13, 17, 23, 0.95);
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid #27343a;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 15px; /* De 13px a 15px */
-  font-weight: 700; /* Más gordita */
+  padding: 20px 7%;
+  background-color: rgba(8, 11, 13, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #27343a;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
   letter-spacing: 2px;
 }
 
 .system {
   color: #ffffff;
-  font-weight: 700;
 }
 
 .status {
-  color: #82969c;
-  font-weight: 700;
+  color: #728890;
 }
 
 /* ===================================================
@@ -65,46 +64,52 @@ section {
 
 .hero {
   padding: 110px 0 70px;
-  border-bottom: 1px solid #27343a;
+  border-bottom: 2px solid #27343a;
 }
 
 .classification {
   margin-bottom: 25px;
-  color: #82969c;
-  font-size: 14px; /* De 13px a 14px */
+  color: #728890;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
 }
 
 h1 {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(65px, 13vw, 140px); /* Título principal más grande */
-  font-weight: 700; /* Más gordita */
+  /* Título principal con Orbitron (Formal, robusto y monumental) */
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(55px, 10vw, 110px);
+  font-weight: 900;
   line-height: 1;
-  letter-spacing: 10px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
 }
 
 h2 {
   margin-bottom: 35px;
   color: #ffffff;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 22px; /* De 18px a 22px */
-  font-weight: 700;
-  letter-spacing: 4px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .subtitle {
   margin-top: 20px;
-  color: #9cb1b7;
-  font-size: 16px; /* De 14px a 16px */
+  color: #82969c;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 
 .serial {
   margin-top: 35px;
   color: #ffffff;
-  font-size: 15px; /* De 13px a 15px */
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -119,7 +124,7 @@ h2 {
 .photo img {
   display: block;
   width: 100%;
-  border: 1px solid #27343a;
+  border: 2px solid #27343a;
   filter: grayscale(15%);
   transition: filter 0.3s ease;
 }
@@ -131,28 +136,31 @@ h2 {
 .data-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #27343a;
-  border-left: 1px solid #27343a;
+  border-top: 2px solid #27343a;
+  border-left: 2px solid #27343a;
 }
 
 .data-grid div {
   padding: 25px;
-  border-right: 1px solid #27343a;
-  border-bottom: 1px solid #27343a;
+  border-right: 2px solid #27343a;
+  border-bottom: 2px solid #27343a;
 }
 
 .data-grid span {
   display: block;
   margin-bottom: 8px;
-  color: #7b9198;
-  font-size: 12px; /* De 11px a 12px */
+  color: #687b82;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .data-grid strong {
   color: #ffffff;
-  font-size: 16px; /* De 14px a 16px */
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -170,16 +178,16 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 22px;
   background: #0d1216;
-  border: 1px solid #27343a;
+  border: 2px solid #27343a;
   transition: all 0.3s ease;
 }
 
 .guitar-card:hover {
   border-color: #d7e0e3;
   transform: translateY(-4px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .guitar-card a {
@@ -190,8 +198,8 @@ h2 {
 .guitar-card .serial {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #82969c;
-  font-size: 12px; /* De 11px a 12px */
+  color: #6d858c;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -201,7 +209,7 @@ h2 {
   height: 180px;
   margin: 12px 0;
   background-color: #080b0d;
-  border: 1px solid #27343a;
+  border: 2px solid #27343a;
   object-fit: cover;
   filter: grayscale(20%);
   transition: filter 0.3s ease, border-color 0.3s ease;
@@ -215,24 +223,26 @@ h2 {
 .guitar-card h3 {
   margin-bottom: 6px;
   color: #ffffff;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 20px; /* De 18px a 20px */
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 .guitar-card p {
-  color: #a3b5ba;
-  font-size: 13px; /* De 12px a 13px */
+  color: #82969c;
+  font-size: 13px;
+  font-weight: 600;
   line-height: 1.5;
 }
 
 .guitar-card .status {
   margin-top: 15px;
   padding-top: 10px;
-  border-top: 1px dashed #27343a;
-  color: #82969c;
-  font-size: 12px;
+  border-top: 2px dashed #27343a;
+  color: #6d858c;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1.5px;
 }
@@ -243,7 +253,7 @@ h2 {
 .history p {
   max-width: 800px;
   margin-bottom: 25px;
-  color: #bdcbcf;
+  color: #aebdc1;
   font-size: 15px;
 }
 
@@ -253,8 +263,8 @@ h2 {
 
 .modifications li {
   padding: 18px 0;
-  border-bottom: 1px solid #27343a;
-  color: #bdcbcf;
+  border-bottom: 2px solid #27343a;
+  color: #aebdc1;
   font-size: 15px;
 }
 
@@ -269,46 +279,47 @@ h2 {
   display: grid;
   grid-template-columns: 120px 1fr;
   padding: 30px 0;
-  border-top: 1px solid #27343a;
+  border-top: 2px solid #27343a;
 }
 
 .year {
   color: #ffffff;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 28px; /* De 25px a 28px */
-  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
 }
 
 .event h3 {
   margin-bottom: 8px;
-  font-size: 16px; /* De 14px a 16px */
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .event p {
-  color: #9cb1b7;
-  font-size: 15px;
+  color: #82969c;
+  font-size: 14px;
 }
 
 .importance {
   padding: 40px;
-  border: 1px solid #27343a;
+  border: 2px solid #27343a;
 }
 
 .importance p {
   max-width: 800px;
   margin-bottom: 20px;
-  color: #bdcbcf;
+  color: #aebdc1;
   font-size: 15px;
 }
 
 .quote {
   margin-top: 40px;
   color: #ffffff !important;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 24px; /* De 22px a 24px */
-  font-weight: 700;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 /* ===================================================
@@ -318,9 +329,10 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 35px 7%;
-  border-top: 1px solid #27343a;
-  color: #7b9198;
-  font-size: 12px; /* De 11px a 12px */
+  border-top: 2px solid #27343a;
+  color: #62747a;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
 }

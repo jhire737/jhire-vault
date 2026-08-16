@@ -1,6 +1,7 @@
 /* ===================================================
    1. CONFIGURACIÓN Y FUENTES
    =================================================== */
+/* Importamos los pesos 400 y 700 para ambas fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap');
 
 *,
@@ -15,6 +16,8 @@ body {
   background: #080b0d;
   color: #d7e0e3;
   font-family: 'Space Mono', monospace;
+  font-size: 15px; /* Aumentado ligeramente para mejor lectura */
+  font-weight: 400;
   line-height: 1.7;
 }
 
@@ -28,21 +31,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 7%;
+  padding: 22px 7%;
   background-color: rgba(13, 17, 23, 0.95);
   backdrop-filter: blur(5px);
   border-bottom: 1px solid #27343a;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 13px;
+  font-size: 15px; /* De 13px a 15px */
+  font-weight: 700; /* Más gordita */
   letter-spacing: 2px;
 }
 
 .system {
   color: #ffffff;
+  font-weight: 700;
 }
 
 .status {
-  color: #6d858c;
+  color: #82969c;
+  font-weight: 700;
 }
 
 /* ===================================================
@@ -64,14 +70,16 @@ section {
 
 .classification {
   margin-bottom: 25px;
-  color: #728890;
-  font-size: 13px;
+  color: #82969c;
+  font-size: 14px; /* De 13px a 14px */
+  font-weight: 700;
   letter-spacing: 3px;
 }
 
 h1 {
   font-family: 'Share Tech Mono', monospace;
-  font-size: clamp(60px, 12vw, 130px);
+  font-size: clamp(65px, 13vw, 140px); /* Título principal más grande */
+  font-weight: 700; /* Más gordita */
   line-height: 1;
   letter-spacing: 10px;
 }
@@ -80,21 +88,24 @@ h2 {
   margin-bottom: 35px;
   color: #ffffff;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 18px;
+  font-size: 22px; /* De 18px a 22px */
+  font-weight: 700;
   letter-spacing: 4px;
 }
 
 .subtitle {
   margin-top: 20px;
-  color: #82969c;
-  font-size: 14px;
+  color: #9cb1b7;
+  font-size: 16px; /* De 14px a 16px */
+  font-weight: 700;
   letter-spacing: 4px;
 }
 
 .serial {
   margin-top: 35px;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 15px; /* De 13px a 15px */
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -133,14 +144,16 @@ h2 {
 .data-grid span {
   display: block;
   margin-bottom: 8px;
-  color: #687b82;
-  font-size: 11px;
+  color: #7b9198;
+  font-size: 12px; /* De 11px a 12px */
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 .data-grid strong {
   color: #ffffff;
-  font-size: 14px;
+  font-size: 16px; /* De 14px a 16px */
+  font-weight: 700;
 }
 
 /* ===================================================
@@ -177,8 +190,9 @@ h2 {
 .guitar-card .serial {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #6d858c;
-  font-size: 11px;
+  color: #82969c;
+  font-size: 12px; /* De 11px a 12px */
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -202,22 +216,24 @@ h2 {
   margin-bottom: 6px;
   color: #ffffff;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 18px;
+  font-size: 20px; /* De 18px a 20px */
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
 .guitar-card p {
-  color: #82969c;
-  font-size: 12px;
-  line-height: 1.4;
+  color: #a3b5ba;
+  font-size: 13px; /* De 12px a 13px */
+  line-height: 1.5;
 }
 
 .guitar-card .status {
   margin-top: 15px;
   padding-top: 10px;
   border-top: 1px dashed #27343a;
-  color: #6d858c;
-  font-size: 11px;
+  color: #82969c;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1.5px;
 }
 
@@ -227,7 +243,8 @@ h2 {
 .history p {
   max-width: 800px;
   margin-bottom: 25px;
-  color: #aebdc1;
+  color: #bdcbcf;
+  font-size: 15px;
 }
 
 .modifications ul {
@@ -237,13 +254,15 @@ h2 {
 .modifications li {
   padding: 18px 0;
   border-bottom: 1px solid #27343a;
-  color: #aebdc1;
+  color: #bdcbcf;
+  font-size: 15px;
 }
 
 .modifications li::before {
   content: ">";
   margin-right: 15px;
   color: #ffffff;
+  font-weight: 700;
 }
 
 .event {
@@ -256,18 +275,20 @@ h2 {
 .year {
   color: #ffffff;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 25px;
+  font-size: 28px; /* De 25px a 28px */
+  font-weight: 700;
 }
 
 .event h3 {
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 16px; /* De 14px a 16px */
+  font-weight: 700;
   letter-spacing: 3px;
 }
 
 .event p {
-  color: #82969c;
-  font-size: 14px;
+  color: #9cb1b7;
+  font-size: 15px;
 }
 
 .importance {
@@ -278,14 +299,16 @@ h2 {
 .importance p {
   max-width: 800px;
   margin-bottom: 20px;
-  color: #aebdc1;
+  color: #bdcbcf;
+  font-size: 15px;
 }
 
 .quote {
   margin-top: 40px;
   color: #ffffff !important;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 22px;
+  font-size: 24px; /* De 22px a 24px */
+  font-weight: 700;
 }
 
 /* ===================================================
@@ -296,8 +319,9 @@ footer {
   justify-content: space-between;
   padding: 35px 7%;
   border-top: 1px solid #27343a;
-  color: #62747a;
-  font-size: 11px;
+  color: #7b9198;
+  font-size: 12px; /* De 11px a 12px */
+  font-weight: 700;
   letter-spacing: 2px;
 }
 

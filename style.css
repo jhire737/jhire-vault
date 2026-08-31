@@ -59,16 +59,16 @@ main {
 }
 
 section {
-  margin-bottom: 100px;
+  margin-bottom: 40px; /* Reducido de 100px a 40px */
 }
 
 .hero {
-  padding: 110px 0 70px;
+  padding: 40px 0 30px; /* Reducido para compactar la cabecera */
   border-bottom: 2px solid #27343a;
 }
 
 .classification {
-  margin-bottom: 25px;
+  margin-bottom: 12px;
   color: #728890;
   font-family: 'Orbitron', sans-serif;
   font-size: 13px;
@@ -77,27 +77,16 @@ section {
 }
 
 h1 {
-  /* Título principal con Orbitron (Formal, robusto y monumental) */
   font-family: 'Orbitron', sans-serif;
-  font-size: clamp(55px, 10vw, 110px);
+  font-size: clamp(40px, 7vw, 75px); /* Un poco más contenido */
   font-weight: 900;
-  line-height: 1;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-}
-
-h2 {
-  margin-bottom: 35px;
-  color: #ffffff;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: 3px;
+  line-height: 1.1;
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
 
 .subtitle {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #82969c;
   font-family: 'Rajdhani', sans-serif;
   font-size: 18px;
@@ -106,7 +95,7 @@ h2 {
 }
 
 .serial {
-  margin-top: 35px;
+  margin-top: 15px;
   color: #ffffff;
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
@@ -118,13 +107,13 @@ h2 {
    4. ELEMENTOS MULTIMEDIA Y GRILLAS DE DATOS
    =================================================== */
 .photo {
-  margin: 70px 0;
+  margin: 30px 0; /* Reducido de 70px a 30px */
 }
 
 .photo img {
   display: block;
   max-width: 100%;
-  max-height: 450px;
+  max-height: 480px;
   width: auto;
   height: auto;
   margin: 0 auto;

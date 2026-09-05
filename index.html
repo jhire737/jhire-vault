@@ -18,7 +18,7 @@
         </div>
         <div class="status">
             <span data-es="SYSTEM ONLINE // CATALOG 2026" data-en="SYSTEM ONLINE // CATALOG 2026">SYSTEM ONLINE // CATALOG 2026</span>
-            <button id="lang-btn" class="lang-toggle">ENG</button>
+            <button id="lang-btn" class="lang-toggle">EN</button>
         </div>
     </header>
 
@@ -218,15 +218,18 @@
         let currentLang = 'es';
 
         langBtn.addEventListener('click', () => {
+            // Cambiamos el idioma activo
             currentLang = currentLang === 'es' ? 'en' : 'es';
-            langBtn.textContent = currentLang === 'es' ? 'ENG' : 'ESP';
+            
+            // El botón muestra el idioma al que puedes cambiar (si estás en ES muestra EN, si estás en EN muestra ES)
+            langBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
 
             document.querySelectorAll('[data-en]').forEach(elemento => {
-                elemento.textContent = elemento.getAttribute(`data-${currentLang}`);
+                const text = elemento.getAttribute(`data-${currentLang}`);
+                if (text) elemento.textContent = text;
             });
         });
     </script>
 
 </body>
 </html>
-

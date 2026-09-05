@@ -51,6 +51,28 @@ header {
 }
 
 /* ===================================================
+   BOTÓN DE IDIOMA
+   =================================================== */
+.lang-toggle {
+  background: #0d1216;
+  color: #aebdc1;
+  border: 2px solid #27343a;
+  padding: 4px 10px;
+  margin-left: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-toggle:hover {
+  background: #27343a;
+  color: #ffffff;
+  border-color: #6d858c;
+}
+
+/* ===================================================
    3. ESTRUCTURA PRINCIPAL Y HERO
    =================================================== */
 main {

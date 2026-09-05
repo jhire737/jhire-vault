@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starsun // Jhire Equipboard Archive</title>
+    
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="starsun-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,11 +21,17 @@
     <header>
         <div class="system">
             <!-- Enlace para volver al index principal -->
-            <a href="../../index.html" style="color: inherit; text-decoration: none;">JHIRE EQUIPBOARD ARCHIVE</a>
+            <a href="../../index.html" style="color: inherit; text-decoration: none;">
+                JHIRE EQUIPBOARD ARCHIVE
+            </a>
         </div>
 
         <div class="status">
-            SYSTEM ONLINE // REG. 2026
+            <span data-es="SYSTEM ONLINE // REG. 2026" data-en="SYSTEM ONLINE // REG. 2026">
+                SYSTEM ONLINE // REG. 2026
+            </span>
+
+            <button id="lang-btn" class="lang-toggle">ES</button>
         </div>
     </header>
 
@@ -29,13 +39,17 @@
 
         <section class="hero">
 
-            <div class="classification">
-                INSTRUMENT // GTR-005
+            <div class="classification"
+                 data-es="GUITARRA // GTR-005"
+                 data-en="GUITAR // GTR-005">
+                GUITARRA // GTR-005
             </div>
 
-            <h1>STARSUN</h1>
+            <h1 data-es="STARSUN" data-en="STARSUN">STARSUN</h1>
 
-            <p class="subtitle">
+            <p class="subtitle"
+               data-es="ELECTROACÚSTICA // &quot;GIBSON J-160E&quot; MOD"
+               data-en="ELECTRO-ACOUSTIC // &quot;GIBSON J-160E&quot; MOD">
                 ELECTROACÚSTICA // "GIBSON J-160E" MOD
             </p>
 
@@ -52,67 +66,101 @@
 
         <section class="specifications">
 
-            <h2>IDENTIFICATION DATA</h2>
+            <h2
+                data-es="DATOS DE IDENTIFICACIÓN"
+                data-en="IDENTIFICATION DATA">
+                DATOS DE IDENTIFICACIÓN
+            </h2>
 
             <div class="data-grid">
 
                 <div>
-                    <span>MARCA</span>
-                    <strong>Starsun (Starson)</strong>
+                    <span data-es="MARCA" data-en="BRAND">MARCA</span>
+                    <strong>Starsun</strong>
                 </div>
 
                 <div>
-                    <span>MODELO</span>
-                    <strong>Electroacústica Clasica-Style Body</strong>
+                    <span data-es="MODELO" data-en="MODEL">MODELO</span>
+                    <strong data-es="Electroacústica Clasica-Style Body" data-en="Classical-Style Body Electro-Acoustic">
+                        Electroacústica Clasica-Style Body
+                    </strong>
                 </div>
 
                 <div>
-                    <span>TIPO</span>
-                    <strong>Réplica / Modificación Gibson J-160E</strong>
+                    <span data-es="TIPO" data-en="TYPE">TIPO</span>
+                    <strong data-es="Réplica / Modificación Gibson J-160E" data-en="Gibson J-160E Replica / Modification">
+                        Réplica / Modificación Gibson J-160E
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ACABADO</span>
-                    <strong>Madera Natural / Proyecto Sunburst</strong>
+                    <span data-es="ACABADO" data-en="FINISH">ACABADO</span>
+                    <strong data-es="Madera Natural / Proyecto Sunburst" data-en="Natural Wood / Sunburst Project">
+                        Madera Natural / Proyecto Sunburst
+                    </strong>
                 </div>
 
                 <div>
-                    <span>FABRICACIÓN</span>
-                    <strong>Desconocida (China)</strong>
+                    <span data-es="FABRICACIÓN" data-en="MANUFACTURE">FABRICACIÓN</span>
+                    <strong data-es="Desconocida (China)" data-en="Unknown (China)">
+                        Desconocida (China)
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ADQUISICIÓN</span>
+                    <span data-es="ADQUISICIÓN" data-en="ACQUISITION">ADQUISICIÓN</span>
                     <strong>2023</strong>
                 </div>
 
                 <div>
-                    <span>PRECIO DE ORIGEN</span>
-                    <strong>Rescate de Taller (S/ 0)</strong>
+                    <span data-es="PRECIO DE ORIGEN" data-en="ORIGINAL PRICE">
+                        PRECIO DE ORIGEN
+                    </span>
+                    <strong data-es="Rescate de Taller (S/ 0)" data-en="Workshop Rescue (S/ 0)">
+                        Rescate de Taller (S/ 0)
+                    </strong>
                 </div>
 
                 <div>
-                    <span>PROCEDENCIA</span>
-                    <strong>Rescate de desván escolar</strong>
+                    <span data-es="PROCEDENCIA" data-en="SOURCE">PROCEDENCIA</span>
+                    <strong data-es="Rescate de desván escolar" data-en="School attic rescue">
+                        Rescate de desván escolar
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ESTADO</span>
-                    <strong>En Modificación / Proyecto Taller</strong>
+                    <span data-es="ESTADO" data-en="STATUS">ESTADO</span>
+                    <strong data-es="En Modificación / Proyecto Taller" data-en="Under Modification / Workshop Project">
+                        En Modificación / Proyecto Taller
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ESTATUS TÉCNICO</span>
-                    <strong>Instalación de puente, electrónica retro y acabado</strong>
+                    <span data-es="ESTATUS TÉCNICO" data-en="TECHNICAL STATUS">
+                        ESTATUS TÉCNICO
+                    </span>
+                    <strong
+                        data-es="Instalación de puente, electrónica retro y acabado"
+                        data-en="Bridge installation, retro electronics, and finish">
+                        Instalación de puente, electrónica retro y acabado
+                    </strong>
                 </div>
 
                 <div>
-                    <span>VALOR SENTIMENTAL</span>
-                    <strong>Alto (Proyecto de ingeniería e ilusión visual)</strong>
+                    <span data-es="VALOR SENTIMENTAL" data-en="SENTIMENTAL VALUE">
+                        VALOR SENTIMENTAL
+                    </span>
+                    <strong
+                        data-es="Alto (Proyecto de ingeniería e ilusión visual)"
+                        data-en="High (Engineering project and visual illusion)">
+                        Alto (Proyecto de ingeniería e ilusión visual)
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ID TÉCNICO</span>
+                    <span data-es="ID TÉCNICO" data-en="TECHNICAL ID">
+                        ID TÉCNICO
+                    </span>
                     <strong>JHJR//GTR//STR-005</strong>
                 </div>
 
@@ -122,86 +170,169 @@
 
         <section class="history">
 
-            <h2>HISTORIA Y BITÁCORA</h2>
+            <h2 data-es="HISTORIA Y BITÁCORA" data-en="HISTORY AND LOG">
+                HISTORIA Y BITÁCORA
+            </h2>
 
-            <p>
+            <p
+                data-es="La Starsun es un proyecto de modificación estética y sonora diseñado para alterar la percepción de quien la observe y toque, convirtiendo un mueble descartado en una ilusión funcional inspirada en la mítica Gibson J-160E utilizada por John Lennon en The Beatles."
+                data-en="The Starsun is an aesthetic and sonic modification project designed to alter the perception of anyone who observes and plays it, turning a discarded piece of furniture into a functional illusion inspired by the mythical Gibson J-160E used by John Lennon in The Beatles.">
                 La Starsun es un proyecto de modificación estética y sonora diseñado para alterar la percepción de quien la observe y toque, convirtiendo un mueble descartado en una ilusión funcional inspirada en la mítica Gibson J-160E utilizada por John Lennon en The Beatles.
             </p>
 
-            <h3 style="margin: 25px 0 15px; color: #ffffff; font-family: 'Orbitron', sans-serif;">FASE 1: EL CONCEPTO Y LA ILUSIÓN</h3>
+            <h3 data-es="FASE 1: EL CONCEPTO Y LA ILUSIÓN" data-en="PHASE 1: THE CONCEPT AND THE ILLUSION">
+                FASE 1: EL CONCEPTO Y LA ILUSIÓN
+            </h3>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "Bueno, en realidad la historia de la Gibson J-160E también es bastante particular. Yo no tengo una Gibson J-160E, es lo que yo he modificado para que se vea como tal. En realidad, pues, creo que sí está bien llamarla Gibson J-160E porque cuando quiero hacer esa clase de broma, he impreso una etiqueta tal cual de una auténtica Gibson con un número de serie del reissue... mandé hacer una etiqueta personalizada, o bueno, la imprimí en un papel naranja y luego le voy a poner adhesivo."
-            </blockquote>
+            <p
+                data-es="Bueno, en realidad la historia de la Gibson J-160E también es bastante particular. Yo no tengo una Gibson J-160E, es lo que yo he modificado para que se vea como tal. En realidad, pues, creo que sí está bien llamarla Gibson J-160E porque cuando quiero hacer esa clase de broma, he impreso una etiqueta tal cual de una auténtica Gibson con un número de serie del reissue... mandé hacer una etiqueta personalizada, o bueno, la imprimí en un papel naranja y luego le voy a poner adhesivo."
+                data-en="Well, actually the story of the Gibson J-160E is also quite unique. I don't have a Gibson J-160E, it's what I've modified to look like one. Actually, well, I think it's fine to call it a Gibson J-160E because when I want to pull that kind of joke, I printed a tag just like an authentic Gibson's with a reissue serial number... I had a custom label made, or well, I printed it on orange paper and then I'm going to put adhesive on it.">
+                Bueno, en realidad la historia de la Gibson J-160E también es bastante particular. Yo no tengo una Gibson J-160E, es lo que yo he modificado para que se vea como tal. En realidad, pues, creo que sí está bien llamarla Gibson J-160E porque cuando quiero hacer esa clase de broma, he impreso una etiqueta tal cual de una auténtica Gibson con un número de serie del reissue... mandé hacer una etiqueta personalizada, o bueno, la imprimí en un papel naranja y luego le voy a poner adhesivo.
+            </p>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "El punto es de que quiero jugar con la percepción de las personas que toquen esa guitarra y: 'Oye, esto suena como una Gibson'. Y les digo: 'Oye, ¿sabes qué? No es una Gibson, es una guitarra china, fíjate en el traste 12. ¿De verdad? Sí, el traste 12 está pegado al cuerpo'. Es una guitarra hecha a mi medida, pero es una guitarra que modifiqué para que se vea como una Gibson y jugar con la percepción de las personas. Caíste, ¿verdad?"
-            </blockquote>
+            <p
+                data-es="El punto es de que quiero jugar con la percepción de las personas que toquen esa guitarra y: 'Oye, esto suena como una Gibson'. Y les digo: 'Oye, ¿sabes qué? No es una Gibson, es una guitarra china, fíjate en el traste 12. ¿De verdad? Sí, el traste 12 está pegado al cuerpo'. Es una guitarra hecha a mi medida, pero es una guitarra que modifiqué para que se vea como una Gibson y jugar con la percepción de las personas. Caíste, ¿verdad?"
+                data-en="The point is that I want to play with the perception of people who play that guitar and: 'Hey, this sounds like a Gibson'. And I tell them: 'Hey, you know what? It's not a Gibson, it's a Chinese guitar, look at the 12th fret. Really? Yes, the 12th fret is glued to the body'. It's a guitar made to my measure, but it's a guitar I modified to look like a Gibson and play with people's perception. You fell for it, right?">
+                El punto es de que quiero jugar con la percepción de las personas que toquen esa guitarra y: 'Oye, esto suena como una Gibson'. Y les digo: 'Oye, ¿sabes qué? No es una Gibson, es una guitarra china, fíjate en el traste 12. ¿De verdad? Sí, el traste 12 está pegado al cuerpo'. Es una guitarra hecha a mi medida, pero es una guitarra que modifiqué para que se vea como una Gibson y jugar con la percepción de las personas. Caíste, ¿verdad?
+            </p>
 
-            <h3 style="margin: 25px 0 15px; color: #ffffff; font-family: 'Orbitron', sans-serif;">FASE 2: EL RESCATE Y LA PRÁCTICA EN BUSES</h3>
+            <h3 data-es="FASE 2: EL RESCATE Y LA PRÁCTICA EN BUSES" data-en="PHASE 2: THE RESCUE AND PRACTICE ON BUSES">
+                FASE 2: EL RESCATE Y LA PRÁCTICA EN BUSES
+            </h3>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "Yo estaba en la secundaria en 2023. Y en ese momento habían talleres de música... he visto en el desván del colegio un montón de guitarras tiradas. Me llamó la atención una guitarra Starson electroacústica. La verdad, nunca probé si funcionaba o no, pero vi que tenía el hueco del jack de salida y los dos potenciómetros arriba... Y dije: '¿Sabes qué? Al carajo, me la llevo porque nadie la usaba'."
-            </blockquote>
+            <p
+                data-es="Yo estaba en la secundaria en 2023. Y en ese momento habían talleres de música... he visto en el desván del colegio un montón de guitarras tiradas. Me llamó la atención una guitarra Starson electroacústica. La verdad, nunca probé si funcionaba o no, pero vi que tenía el hueco del jack de salida y los dos potenciómetros arriba... Y dije: '¿Sabes qué? Al carajo, me la llevo porque nadie la usaba'."
+                data-en="I was in high school in 2023. And at that time there were music workshops... I saw a bunch of guitars lying around in the school attic. A Starsun electro-acoustic guitar caught my attention. To be honest, I never tested if it worked or not, but I saw it had the output jack hole and the two potentiometers on top... And I said: 'You know what? Screw it, I'm taking it because nobody was using it'.">
+                Yo estaba en la secundaria en 2023. Y en ese momento habían talleres de música... he visto en el desván del colegio un montón de guitarras tiradas. Me llamó la atención una guitarra Starson electroacústica. La verdad, nunca probé si funcionaba o no, pero vi que tenía el hueco del jack de salida y los dos potenciómetros arriba... Y dije: '¿Sabes qué? Al carajo, me la llevo porque nadie la usaba'.
+            </p>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "Metí en problemas a la señora que hace los inventarios, la señora Carmen. No sé si se habrá enterado que yo me la llevé. Quería hacerla una Gibson J-160E porque a mí me faltaba esa guitarra en mi arsenal. Quería tener una guitarra así, y todavía quiero."
-            </blockquote>
+            <p
+                data-es="Metí en problemas a la señora que hace los inventarios, la señora Carmen. No sé si se habrá enterado que yo me la llevé. Quería hacerla una Gibson J-160E porque a mí me faltaba esa guitarra en mi arsenal. Quería tener una guitarra así, y todavía quiero."
+                data-en="I got the lady who does the inventories, Mrs. Carmen, into trouble. I don't know if she found out that I took it. I wanted to turn it into a Gibson J-160E because I was missing that guitar in my arsenal. I wanted to have a guitar like that, and I still do.">
+                Metí en problemas a la señora que hace los inventarios, la señora Carmen. No sé si se habrá enterado que yo me la llevé. Quería hacerla una Gibson J-160E porque a mí me faltaba esa guitarra en mi arsenal. Quería tener una guitarra así, y todavía quiero.
+            </p>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "Básicamente esta es una guitarra Starson con escala de guitarra clásica: la unión del mástil con el cuerpo es en el traste 12 del diapasón. La lijé para dejarla en su estado natural como la Gibson que tenía Lennon y la llegué a usar por un tiempo así, en su estado natural, con cuerdas calibre 9 de la marca L'Espoir o algo así. No me gustó y la dejé botada por ahí."
-            </blockquote>
+            <p
+                data-es="Básicamente esta es una guitarra Starson con escala de guitarra clásica: la unión del mástil con el cuerpo es en el traste 12 del diapasón. La lijé para dejarla en su estado natural como la Gibson que tenía Lennon y la llegué a usar por un tiempo así, en su estado natural, con cuerdas calibre 9 de la marca L'Espoir o algo así. No me gustó y la dejé botada por ahí."
+                data-en="Basically this is a Starsun guitar with a classical guitar scale: the neck-to-body joint is at the 12th fret of the fingerboard. I sanded it down to leave it in its natural state like the Gibson Lennon had, and I ended up using it for a while like that, in its natural state, with gauge 9 strings from the L'Espoir brand or something like that. I didn't like it and left it lying around somewhere.">
+                Básicamente esta es una guitarra Starson con escala de guitarra clásica: la unión del mástil con el cuerpo es en el traste 12 del diapasón. La lijé para dejarla en su estado natural como la Gibson que tenía Lennon y la llegué a usar por un tiempo así, en su estado natural, con cuerdas calibre 9 de la marca L'Espoir o algo así. No me gustó y la dejé botada por ahí.
+            </p>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "Supuestamente la iba a pintar el luthier de confianza que tenía en ese momento, pero como no tenía trabajo, solamente trabajaba de los buses... ganaba y gastaba. No fue hasta hace unas semanas que dije: 'Oye, ¿sabes qué? Voy a recoger mi guitarra'. Dicho y hecho, la recogí y aquí está en mi cuarto."
-            </blockquote>
+            <p
+                data-es="Supuestamente la iba a pintar el luthier de confianza que tenía en ese momento, pero como no tenía trabajo, solamente trabajaba de los buses... ganaba y gastaba. No fue hasta hace unas semanas que dije: 'Oye, ¿sabes qué? Voy a recoger mi guitarra'. Dicho y hecho, la recogí y aquí está en mi cuarto."
+                data-en="Supposedly the trusted luthier I had at the time was going to paint it, but since he didn't have a job, he only worked on the buses... he earned and spent. It wasn't until a few weeks ago that I said: 'Hey, you know what? I'm going to pick up my guitar'. No sooner said than done, I picked it up and here it is in my room.">
+                Supuestamente la iba a pintar el luthier de confianza que tenía en ese momento, pero como no tenía trabajo, solamente trabajaba de los buses... ganaba y gastaba. No fue hasta hace unas semanas que dije: 'Oye, ¿sabes qué? Voy a recoger mi guitarra'. Dicho y hecho, la recogí y aquí está en mi cuarto.
+            </p>
 
-            <blockquote style="margin-bottom: 20px; padding: 15px 20px; border-left: 3px solid #728890; background: #0d1216; color: #aebdc1; font-style: italic;">
-                "La verdad es que sí me siento culpable y pienso reponer la guitarra del colegio en algún momento, comprar una guitarra por Marketplace y darla, pero ahora sí bien ajustada y con cuerdas, porque esta guitarra la encontré hecha poronga. Genuinamente, si nadie le daba atención, esa guitarra iba a terminar hecha mierda. Así que creo que le hice un favor a la guitarra, mas no a la señora Carmen."
-            </blockquote>
+            <p
+                data-es="La verdad es que sí me siento culpable y pienso reponer la guitarra del colegio en algún momento, comprar una guitarra por Marketplace y darla, pero ahora sí bien ajustada y con cuerdas, porque esta guitarra la encontré hecha poronga. Genuinamente, si nadie le daba atención, esa guitarra iba a terminar hecha mierda. Así que creo que le hice un favor a la guitarra, mas no a la señora Carmen."
+                data-en="The truth is that I do feel guilty and I plan to replace the school guitar at some point, buy a guitar on Marketplace and give it, but this time properly adjusted and with strings, because I found this guitar utterly thrashed. Genuinely, if no one paid attention to it, that guitar was going to end up completely ruined. So I think I did the guitar a favor, but not Mrs. Carmen.">
+                La verdad es que sí me siento culpable y pienso reponer la guitarra del colegio en algún momento, comprar una guitarra por Marketplace y darla, pero ahora sí bien ajustada y con cuerdas, porque esta guitarra la encontré hecha poronga. Genuinamente, si nadie le daba atención, esa guitarra iba a terminar hecha mierda. Así que creo que le hice un favor a la guitarra, mas no a la señora Carmen.
+            </p>
 
         </section>
 
         <section class="modifications">
 
-            <h2>MODIFICACIONES Y REPARACIONES</h2>
+            <h2
+                data-es="MODIFICACIONES Y REPARACIONES"
+                data-en="MODIFICATIONS AND REPAIRS">
+                MODIFICACIONES Y REPARACIONES
+            </h2>
 
             <ul>
-                <li>Rescate estructural y remoción de restos del taller escolar.</li>
-                <li>Lijado completo del cuerpo a madera vista natural (etapa visual inicial Lennon).</li>
-                <li>Etiqueta interna personalizada impresa en papel naranja con número de serie Reissue Gibson.</li>
-                <li>Mantenimiento de unión de mástil en traste 12 (formato clásico adaptado).</li>
-                <li>Proyecto de instalación de puente de nogal y doble potenciómetro sobre tapa superior.</li>
-                <li>Instalación de circuito retro y salida jack integrada.</li>
+
+                <li
+                    data-es="Rescate estructural y remoción de restos del taller escolar."
+                    data-en="Structural rescue and removal of school workshop remains.">
+                    Rescate estructural y remoción de restos del taller escolar.
+                </li>
+
+                <li
+                    data-es="Lijado completo del cuerpo a madera vista natural (etapa visual inicial Lennon)."
+                    data-en="Complete body sanding to natural exposed wood (initial Lennon visual stage).">
+                    Lijado completo del cuerpo a madera vista natural (etapa visual inicial Lennon).
+                </li>
+
+                <li
+                    data-es="Etiqueta interna personalizada impresa en papel naranja con número de serie Reissue Gibson."
+                    data-en="Custom internal label printed on orange paper with Gibson Reissue serial number.">
+                    Etiqueta interna personalizada impresa en papel naranja con número de serie Reissue Gibson.
+                </li>
+
+                <li
+                    data-es="Mantenimiento de unión de mástil en traste 12 (formato clásico adaptado)."
+                    data-en="Maintenance of neck joint at the 12th fret (adapted classical format).">
+                    Mantenimiento de unión de mástil en traste 12 (formato clásico adaptado).
+                </li>
+
+                <li
+                    data-es="Proyecto de instalación de puente de nogal y doble potenciómetro sobre tapa superior."
+                    data-en="Project for walnut bridge installation and dual potentiometer on top board.">
+                    Proyecto de instalación de puente de nogal y doble potenciómetro sobre tapa superior.
+                </li>
+
+                <li
+                    data-es="Instalación de circuito retro y salida jack integrada."
+                    data-en="Installation of retro circuit and integrated jack output.">
+                    Instalación de circuito retro y salida jack integrada.
+                </li>
+
             </ul>
 
         </section>
 
         <section class="timeline">
 
-            <h2>LÍNEA DE TIEMPO</h2>
+            <h2 data-es="LÍNEA DE TIEMPO" data-en="TIMELINE">
+                LÍNEA DE TIEMPO
+            </h2>
 
             <div class="event">
                 <div class="year">2023</div>
                 <div>
-                    <h3>EL RESCATE EN LA SECUNDARIA</h3>
-                    <p>Recuperada del desván del colegio en estado de abandono. Inicio del proyecto visual J-160E.</p>
+                    <h3
+                        data-es="EL RESCATE EN LA SECUNDARIA"
+                        data-en="THE HIGH SCHOOL RESCUE">
+                        EL RESCATE EN LA SECUNDARIA
+                    </h3>
+                    <p
+                        data-es="Recuperada del desván del colegio en estado de abandono. Inicio del proyecto visual J-160E."
+                        data-en="Recovered from the school attic in an abandoned state. Start of the J-160E visual project.">
+                        Recuperada del desván del colegio en estado de abandono. Inicio del proyecto visual J-160E.
+                    </p>
                 </div>
             </div>
 
             <div class="event">
                 <div class="year">2023 - 2024</div>
                 <div>
-                    <h3>DESTRIPADO Y PRUEBAS</h3>
-                    <p>Lijado natural al estilo John Lennon. Pruebas de encordado L'Espoir calibre .09 y reposo de luthería.</p>
+                    <h3
+                        data-es="DESTRIPADO Y PRUEBAS"
+                        data-en="STRIPPING AND TESTS">
+                        DESTRIPADO Y PRUEBAS
+                    </h3>
+                    <p
+                        data-es="Lijado natural al estilo John Lennon. Pruebas de encordado L'Espoir calibre .09 y reposo de luthería."
+                        data-en="Natural sanding in John Lennon style. L'Espoir gauge .09 stringing tests and lutherie resting.">
+                        Lijado natural al estilo John Lennon. Pruebas de encordado L'Espoir calibre .09 y reposo de luthería.
+                    </p>
                 </div>
             </div>
 
             <div class="event">
                 <div class="year">2026</div>
                 <div>
-                    <h3>RETORNO AL TALLER PERSONAL</h3>
-                    <p>Recuperación desde el luthier hacia el cuarto de proyectos. Ensamble, Sunburst, puente de nogal y calibración.</p>
+                    <h3
+                        data-es="RETORNO AL TALLER PERSONAL"
+                        data-en="RETURN TO PERSONAL WORKSHOP">
+                        RETORNO AL TALLER PERSONAL
+                    </h3>
+                    <p
+                        data-es="Recuperación desde el luthier hacia el cuarto de proyectos. Ensamble, Sunburst, puente de nogal y calibración."
+                        data-en="Retrieval from the luthier to the project room. Assembly, Sunburst, walnut bridge, and setup.">
+                        Recuperación desde el luthier hacia el cuarto de proyectos. Ensamble, Sunburst, puente de nogal y calibración.
+                    </p>
                 </div>
             </div>
 
@@ -209,17 +340,26 @@
 
         <section class="importance">
 
-            <h2>SIGNIFICADO Y VALOR</h2>
+            <h2
+                data-es="SIGNIFICADO Y VALOR"
+                data-en="MEANING AND VALUE">
+                SIGNIFICADO Y VALOR
+            </h2>
 
             <p>
                 <strong>JHJR // GTR // STR-005</strong>
             </p>
 
-            <p>
-                La Starsun es la manifestación del ingenio de taller: transformar un instrumento destinado al abandono en una pieza de conversación, ingeniería de prototipos y tributo estéticoBeatle.
+            <p
+                data-es="La Starsun es la manifestación del ingenio de taller: transformar un instrumento destinado al abandono en una pieza de conversación, ingeniería de prototipos y tributo estético Beatle."
+                data-en="The Starsun is the manifestation of workshop ingenuity: transforming an instrument destined for abandonment into a conversation piece, prototype engineering, and Beatle aesthetic tribute.">
+                La Starsun es la manifestación del ingenio de taller: transformar un instrumento destinado al abandono en una pieza de conversación, ingeniería de prototipos y tributo estético Beatle.
             </p>
 
-            <p class="quote">
+            <p
+                class="quote"
+                data-es="&quot;De leña de taller escolar a ilusión vintage de estudio.&quot;"
+                data-en="&quot;From school workshop firewood to vintage studio illusion.&quot;">
                 "De leña de taller escolar a ilusión vintage de estudio."
             </p>
 
@@ -228,9 +368,33 @@
     </main>
 
     <footer>
-        <p>JHIRE EQUIPBOARD ARCHIVE</p>
-        <p>STR-005 // REGISTERED 2026</p>
+        <p data-es="JHIRE EQUIPBOARD ARCHIVE" data-en="JHIRE EQUIPBOARD ARCHIVE">
+            JHIRE EQUIPBOARD ARCHIVE
+        </p>
+        <p data-es="STR-005 // REGISTERED 2026" data-en="STR-005 // REGISTERED 2026">
+            STR-005 // REGISTERED 2026
+        </p>
     </footer>
+
+    <!-- MOTOR DE IDIOMA -->
+    <script>
+        const langBtn = document.getElementById('lang-btn');
+        let currentLang = 'es';
+
+        langBtn.addEventListener('click', () => {
+            // Cambiamos el idioma activo
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+
+            // El botón muestra el idioma actual
+            langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
+
+            // Cambiamos todos los textos traducibles (Usamos innerHTML para no romper etiquetas)
+            document.querySelectorAll('[data-en]').forEach(elemento => {
+                const text = elemento.getAttribute(`data-${currentLang}`);
+                if (text) elemento.innerHTML = text;
+            });
+        });
+    </script>
 
 </body>
 </html>

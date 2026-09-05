@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Polilla // Jhire Equipboard Archive</title>
+    
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="polilla-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,11 +21,17 @@
     <header>
         <div class="system">
             <!-- Enlace para volver al index principal -->
-            <a href="../../index.html" style="color: inherit; text-decoration: none;">JHIRE EQUIPBOARD ARCHIVE</a>
+            <a href="../../index.html" style="color: inherit; text-decoration: none;">
+                JHIRE EQUIPBOARD ARCHIVE
+            </a>
         </div>
 
         <div class="status">
-            SYSTEM ONLINE // REG. 2026
+            <span data-es="SYSTEM ONLINE // REG. 2026" data-en="SYSTEM ONLINE // REG. 2026">
+                SYSTEM ONLINE // REG. 2026
+            </span>
+
+            <button id="lang-btn" class="lang-toggle">ES</button>
         </div>
     </header>
 
@@ -29,13 +39,17 @@
 
         <section class="hero">
 
-            <div class="classification">
+            <div class="classification"
+                 data-es="GUITARRA // GTR-005"
+                 data-en="GUITAR // GTR-005">
                 GUITARRA // GTR-005
             </div>
 
             <h1>LA POLILLA</h1>
 
-            <p class="subtitle">
+            <p class="subtitle"
+               data-es="JAMES NELIGAN DEV-A-BBST // BLACKBURST (CAOBA)"
+               data-en="JAMES NELIGAN DEV-A-BBST // BLACKBURST (MAHOGANY)">
                 JAMES NELIGAN DEV-A-BBST // BLACKBURST (CAOBA)
             </p>
 
@@ -52,67 +66,99 @@
 
         <section class="specifications">
 
-            <h2>IDENTIFICATION DATA</h2>
+            <h2
+                data-es="DATOS DE IDENTIFICACIÓN"
+                data-en="IDENTIFICATION DATA">
+                DATOS DE IDENTIFICACIÓN
+            </h2>
 
             <div class="data-grid">
 
                 <div>
-                    <span>MARCA</span>
+                    <span data-es="MARCA" data-en="BRAND">MARCA</span>
                     <strong>James Neligan</strong>
                 </div>
 
                 <div>
-                    <span>MODELO</span>
+                    <span data-es="MODELO" data-en="MODEL">MODELO</span>
                     <strong>DEV-A-BBST</strong>
                 </div>
 
                 <div>
-                    <span>TIPO</span>
-                    <strong>Acústica Concerto / Caoba</strong>
+                    <span data-es="TIPO" data-en="TYPE">TIPO</span>
+                    <strong data-es="Acústica Concerto / Caoba" data-en="Concert Acoustic / Mahogany">
+                        Acústica Concerto / Caoba
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ACABADO</span>
-                    <strong>Blackburst (Caoba)</strong>
+                    <span data-es="ACABADO" data-en="FINISH">ACABADO</span>
+                    <strong data-es="Blackburst (Caoba)" data-en="Blackburst (Mahogany)">
+                        Blackburst (Caoba)
+                    </strong>
                 </div>
 
                 <div>
-                    <span>FABRICACIÓN</span>
+                    <span data-es="FABRICACIÓN" data-en="MANUFACTURE">FABRICACIÓN</span>
                     <strong>≈ 2012 – 2015</strong>
                 </div>
 
                 <div>
-                    <span>ADQUISICIÓN</span>
-                    <strong>Abril de 2024</strong>
+                    <span data-es="ADQUISICIÓN" data-en="ACQUISITION">ADQUISICIÓN</span>
+                    <strong data-es="Abril de 2024" data-en="April 2024">
+                        Abril de 2024
+                    </strong>
                 </div>
 
                 <div>
-                    <span>PRECIO DE ORIGEN</span>
-                    <strong>Obsequio (Gama Media-Baja)</strong>
+                    <span data-es="PRECIO DE ORIGEN" data-en="ORIGINAL PRICE">
+                        PRECIO DE ORIGEN
+                    </span>
+                    <strong data-es="Obsequio (Gama Media-Baja)" data-en="Gift (Low-Mid Range)">
+                        Obsequio (Gama Media-Baja)
+                    </strong>
                 </div>
 
                 <div>
-                    <span>PROCEDENCIA</span>
-                    <strong>Obsequio de Francisco Chirinos</strong>
+                    <span data-es="PROCEDENCIA" data-en="SOURCE">PROCEDENCIA</span>
+                    <strong data-es="Obsequio de Francisco Chirinos" data-en="Gift from Francisco Chirinos">
+                        Obsequio de Francisco Chirinos
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ESTADO</span>
-                    <strong>Activa / Gama Alta de la Colección</strong>
+                    <span data-es="ESTADO" data-en="STATUS">ESTADO</span>
+                    <strong data-es="Activa / Gama Alta de la Colección" data-en="Active / High-End of the Collection">
+                        Activa / Gama Alta de la Colección
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ESTATUS TÉCNICO</span>
-                    <strong>Instrumento Principal de Estudio y Presentación</strong>
+                    <span data-es="ESTATUS TÉCNICO" data-en="TECHNICAL STATUS">
+                        ESTATUS TÉCNICO
+                    </span>
+                    <strong
+                        data-es="Instrumento Principal de Estudio y Presentación"
+                        data-en="Main Studio and Performance Instrument">
+                        Instrumento Principal de Estudio y Presentación
+                    </strong>
                 </div>
 
                 <div>
-                    <span>VALOR SENTIMENTAL</span>
-                    <strong>Inestimable / Alta Relevancia</strong>
+                    <span data-es="VALOR SENTIMENTAL" data-en="SENTIMENTAL VALUE">
+                        VALOR SENTIMENTAL
+                    </span>
+                    <strong
+                        data-es="Inestimable / Alta Relevancia"
+                        data-en="Priceless / High Relevance">
+                        Inestimable / Alta Relevancia
+                    </strong>
                 </div>
 
                 <div>
-                    <span>ID TÉCNICO</span>
+                    <span data-es="ID TÉCNICO" data-en="TECHNICAL ID">
+                        ID TÉCNICO
+                    </span>
                     <strong>JHJR//GTR//POL-003</strong>
                 </div>
 
@@ -122,29 +168,43 @@
 
         <section class="history">
 
-            <h2>HISTORIA</h2>
+            <h2 data-es="HISTORIA" data-en="HISTORY">
+                HISTORIA
+            </h2>
 
-            <p>
+            <p
+                data-es="La Polilla llegó a mi colección de una manera que jamás habría esperado. A comienzos de 2024, cuando todavía tenía 16 años, estaba tocando en Miraflores con Orión. Al terminar de tocar baje cerca a la embajada de Brasil, en plena Jose Pardo vi a un músico con un estuche rígido: un sujeto flaco, bajo, de pelo largo amarrado, con lentes y con un look bohemio que me recordó inmediatamente a Charly García. Me acerqué a conversar con él intrigado por la clase de guitarra que llevaba."
+                data-en="La Polilla arrived in my collection in a way I would have never expected. In early 2024, when I was still 16 years old, I was playing in Miraflores with Orión. After finishing playing, I went down near the Brazilian embassy, right on Jose Pardo, I saw a musician with a hard case: a skinny, short guy, with long tied hair, glasses, and a bohemian look that immediately reminded me of Charly García. I approached to talk to him, intrigued by the kind of guitar he was carrying.">
                 La Polilla llegó a mi colección de una manera que jamás habría esperado. A comienzos de 2024, cuando todavía tenía 16 años, estaba tocando en Miraflores con Orión. Al terminar de tocar baje cerca a la embajada de Brasil, en plena Jose Pardo vi a un músico con un estuche rígido: un sujeto flaco, bajo, de pelo largo amarrado, con lentes y con un look bohemio que me recordó inmediatamente a Charly García. Me acerqué a conversar con él intrigado por la clase de guitarra que llevaba.
             </p>
 
-            <p>
+            <p
+                data-es='Ese músico era Francisco Chirinos, un blusero de Chorrillos que suele presentarse en el Gato Tulipán, en Barranco. Terminamos conversando durante largo rato sobre Bob Dylan, The Beatles, blues e historias de carretera; incluso me enseñó cómo fabricar un slide casero. Francisco también había tocado en la calle (según lo que oí) y probablemente encontró algo familiar en mí. En aquella época yo tocaba guitarra y armónica, e interpretaba <em>"El baile de los que sobran"</em> usando una armónica para reemplazar el arreglo de sintetizador/armonio.'
+                data-en='That musician was Francisco Chirinos, a bluesman from Chorrillos who usually performs at Gato Tulipán, in Barranco. We ended up talking for a long time about Bob Dylan, The Beatles, blues, and road stories; he even taught me how to make a homemade slide. Francisco had also played on the street (from what I heard) and probably found something familiar in me. At that time I played guitar and harmonica, and I performed <em>"El baile de los que sobran"</em> using a harmonica to replace the synthesizer/harmonium arrangement.'>
                 Ese músico era Francisco Chirinos, un blusero de Chorrillos que suele presentarse en el Gato Tulipán, en Barranco. Terminamos conversando durante largo rato sobre Bob Dylan, The Beatles, blues e historias de carretera; incluso me enseñó cómo fabricar un slide casero. Francisco también había tocado en la calle (según lo que oí) y probablemente encontró algo familiar en mí. En aquella época yo tocaba guitarra y armónica, e interpretaba <em>"El baile de los que sobran"</em> usando una armónica para reemplazar el arreglo de sintetizador/armonio.
             </p>
 
-            <p>
-                Mantuvimos contacto por WhatsApp y en un momento me preguntó si tenía una guitarra "decente". Le mostré a Piscis, pero él insisted en que necesitaba un instrumento de mayor categoría para mi nivel y desarrollo. Sorpresivamente, me dijo que quería regalarme una. Me envió el enlace de una James Neligan DEVABBST.
+            <p
+                data-es='Mantuvimos contacto por WhatsApp y en un momento me preguntó si tenía una guitarra "decente". Le mostré a Piscis, pero él insistió en que necesitaba un instrumento de mayor categoría para mi nivel y desarrollo. Sorpresivamente, me dijo que quería regalarme una. Me envió el enlace de una James Neligan DEVABBST.'
+                data-en='We kept in touch via WhatsApp and at one point he asked if I had a "decent" guitar. I showed him Piscis, but he insisted that I needed a higher-category instrument for my level and development. Surprisingly, he told me he wanted to gift me one. He sent me the link to a James Neligan DEVABBST.'>
+                Mantuvimos contacto por WhatsApp y en un momento me preguntó si tenía una guitarra "decente". Le mostré a Piscis, pero él insistió en que necesitaba un instrumento de mayor categoría para mi nivel y desarrollo. Sorpresivamente, me dijo que quería regalarme una. Me envió el enlace de una James Neligan DEVABBST.
             </p>
 
-            <p>
+            <p
+                data-es="En abril de 2024, durante mi primer mes en la universidad, fui junto a mi mamá hasta Chorrillos (bajando en la estación Terán del Metropolitano) para visitar la casa de Francisco. Mi mamá estaba preocupada, como cualquier madre al acompañar a su hijo menor de edad a la casa de alguien conocido en la calle. Sin embargo, al llegar encontramos a un tipo tranquilo escuchando a Ravi Shankar. Al reconocer la música, conversamos sobre mi profunda fascinación por la cultura asiática e hindú: su música, religiones, gastronomía y cosmología."
+                data-en="In April 2024, during my first month at the university, I went with my mom to Chorrillos (getting off at the Terán station of the Metropolitano) to visit Francisco's house. My mom was worried, like any mother accompanying her minor son to the house of someone met on the street. However, upon arriving we found a calm guy listening to Ravi Shankar. Recognizing the music, we talked about my deep fascination with Asian and Hindu culture: its music, religions, gastronomy, and cosmology.">
                 En abril de 2024, durante mi primer mes en la universidad, fui junto a mi mamá hasta Chorrillos (bajando en la estación Terán del Metropolitano) para visitar la casa de Francisco. Mi mamá estaba preocupada, como cualquier madre al acompañar a su hijo menor de edad a la casa de alguien conocido en la calle. Sin embargo, al llegar encontramos a un tipo tranquilo escuchando a Ravi Shankar. Al reconocer la música, conversamos sobre mi profunda fascinación por la cultura asiática e hindú: su música, religiones, gastronomía y cosmología.
             </p>
 
-            <p>
+            <p
+                data-es='Francisco entró a su habitación, salió con la James Neligan y me dijo simplemente: <em>"Tócala"</em>. La primera canción que interpreté con ella fue <em>"The House of the Rising Sun"</em> en la versión de The Animals, una de las favoritas de mi mamá, quien quedó gratamente sorprendida por el sonido. Tras escucharla, Francisco me dijo: <em>"Tómala. Es tuya"</em>. Sin transacciones, intercambios ni negociaciones; fue un acto puro de generosidad entre músicos.'
+                data-en='Francisco went into his room, came out with the James Neligan and simply told me: <em>"Play it"</em>. The first song I performed with it was <em>"The House of the Rising Sun"</em> in The Animals&apos; version, one of my mom&apos;s favorites, who was pleasantly surprised by the sound. After listening to it, Francisco told me: <em>"Take it. It's yours"</em>. No transactions, exchanges, or negotiations; it was a pure act of generosity between musicians.'>
                 Francisco entró a su habitación, salió con la James Neligan y me dijo simplemente: <em>"Tócala"</em>. La primera canción que interpreté con ella fue <em>"The House of the Rising Sun"</em> en la versión de The Animals, una de las favoritas de mi mamá, quien quedó gratamente sorprendida por el sonido. Tras escucharla, Francisco me dijo: <em>"Tómala. Es tuya"</em>. Sin transacciones, intercambios ni negociaciones; fue un acto puro de generosidad entre músicos.
             </p>
 
-            <p>
+            <p
+                data-es="Ese mismo día, de regreso con mi mamá, fuimos a comer helados por el Malecón cerca de la zona de artes musicales de la PUCP, cerrando una jornada inolvidable. Aunque inicialmente no contaba con correa ni estuche rígido propio, La Polilla se convirtió de inmediato en la guitarra de mayor calidad y mayor valor sentimental de mi colección."
+                data-en="That same day, heading back with my mom, we went to eat ice cream by the Malecón near the musical arts area of the PUCP, closing an unforgettable day. Although it initially didn't have its own strap or hard case, La Polilla immediately became the highest quality and most sentimentally valuable guitar in my collection.">
                 Ese mismo día, de regreso con mi mamá, fuimos a comer helados por el Malecón cerca de la zona de artes musicales de la PUCP, cerrando una jornada inolvidable. Aunque inicialmente no contaba con correa ni estuche rígido propio, La Polilla se convirtió de inmediato en la guitarra de mayor calidad y mayor valor sentimental de mi colección.
             </p>
 
@@ -152,51 +212,119 @@
 
         <section class="modifications">
 
-            <h2>NOTAS TÉCNICAS Y EQUIPAMIENTO</h2>
+            <h2
+                data-es="NOTAS TÉCNICAS Y EQUIPAMIENTO"
+                data-en="TECHNICAL NOTES AND EQUIPMENT">
+                NOTAS TÉCNICAS Y EQUIPAMIENTO
+            </h2>
 
             <ul>
-                <li>Acabado especial Blackburst sobre madera de Caoba.</li>
-                <li>Incorporación posterior de correa personalizada para interpretación de pie.</li>
-                <li>Mantenimiento y calibración para máximo rendimiento acústico.</li>
-                <li>Pendiente 1: Adquisición e implementación de estuche rígido para su protección.</li>
-                <li>Pendiente 2: Adquisición e implementación pastilla de contacto, en especifico el DiMarzio DP130 Acoustic Model, usado por Francisco en su Martin</li>
+
+                <li
+                    data-es="Acabado especial Blackburst sobre madera de Caoba."
+                    data-en="Special Blackburst finish on Mahogany wood.">
+                    Acabado especial Blackburst sobre madera de Caoba.
+                </li>
+
+                <li
+                    data-es="Incorporación posterior de correa personalizada para interpretación de pie."
+                    data-en="Later addition of a custom strap for standing performance.">
+                    Incorporación posterior de correa personalizada para interpretación de pie.
+                </li>
+
+                <li
+                    data-es="Mantenimiento y calibración para máximo rendimiento acústico."
+                    data-en="Maintenance and setup for maximum acoustic performance.">
+                    Mantenimiento y calibración para máximo rendimiento acústico.
+                </li>
+
+                <li
+                    data-es="Pendiente 1: Adquisición e implementación de estuche rígido para su protección."
+                    data-en="Pending 1: Acquisition and implementation of a hard case for its protection.">
+                    Pendiente 1: Adquisición e implementación de estuche rígido para su protección.
+                </li>
+
+                <li
+                    data-es="Pendiente 2: Adquisición e implementación pastilla de contacto, en especifico el DiMarzio DP130 Acoustic Model, usado por Francisco en su Martin"
+                    data-en="Pending 2: Acquisition and implementation of a contact pickup, specifically the DiMarzio DP130 Acoustic Model, used by Francisco on his Martin">
+                    Pendiente 2: Adquisición e implementación pastilla de contacto, en especifico el DiMarzio DP130 Acoustic Model, usado por Francisco en su Martin
+                </li>
+
             </ul>
 
         </section>
 
         <section class="timeline">
 
-            <h2>LÍNEA DE TIEMPO</h2>
+            <h2 data-es="LÍNEA DE TIEMPO" data-en="TIMELINE">
+                LÍNEA DE TIEMPO
+            </h2>
 
             <div class="event">
-                <div class="year">INICIOS 2024</div>
+                <div class="year" data-es="INICIOS 2024" data-en="EARLY 2024">INICIOS 2024</div>
                 <div>
-                    <h3>EL ENCUENTRO EN MIRAFLORES</h3>
-                    <p>Encuentro con el músico Francisco Chirinos tras una sesión callejera con Orión. Conversaciones sobre blues, Beatles y slides caseros.</p>
+                    <h3
+                        data-es="EL ENCUENTRO EN MIRAFLORES"
+                        data-en="THE MEETING IN MIRAFLORES">
+                        EL ENCUENTRO EN MIRAFLORES
+                    </h3>
+
+                    <p
+                        data-es="Encuentro con el músico Francisco Chirinos tras una sesión callejera con Orión. Conversaciones sobre blues, Beatles y slides caseros."
+                        data-en="Meeting with musician Francisco Chirinos after a street session with Orión. Conversations about blues, Beatles, and homemade slides.">
+                        Encuentro con el músico Francisco Chirinos tras una sesión callejera con Orión. Conversaciones sobre blues, Beatles y slides caseros.
+                    </p>
                 </div>
             </div>
 
             <div class="event">
-                <div class="year">ABRIL 2024</div>
+                <div class="year" data-es="ABRIL 2024" data-en="APRIL 2024">ABRIL 2024</div>
                 <div>
-                    <h3>LLEGADA Y ENTREGA EN CHORRILLOS</h3>
-                    <p>Visita a Chorrillos junto a mi madre. Charla sobre Ravi Shankar, interpretación de "The House of the Rising Sun" y entrega oficial de la guitarra.</p>
+                    <h3
+                        data-es="LLEGADA Y ENTREGA EN CHORRILLOS"
+                        data-en="ARRIVAL AND HANDOVER IN CHORRILLOS">
+                        LLEGADA Y ENTREGA EN CHORRILLOS
+                    </h3>
+
+                    <p
+                        data-es="Visita a Chorrillos junto a mi madre. Charla sobre Ravi Shankar, interpretación de &quot;The House of the Rising Sun&quot; y entrega oficial de la guitarra."
+                        data-en="Visit to Chorrillos with my mother. Chat about Ravi Shankar, performance of &quot;The House of the Rising Sun&quot;, and official handover of the guitar.">
+                        Visita a Chorrillos junto a mi madre. Charla sobre Ravi Shankar, interpretación de "The House of the Rising Sun" y entrega oficial de la guitarra.
+                    </p>
                 </div>
             </div>
 
             <div class="event">
                 <div class="year">2024 — 2026</div>
                 <div>
-                    <h3>INSTRUMENTO LÍDER</h3>
-                    <p>Consolidación de La Polilla como la guitarra de gama más alta y pilar sonoro en el estudio personal de Jhire.</p>
+                    <h3
+                        data-es="INSTRUMENTO LÍDER"
+                        data-en="LEAD INSTRUMENT">
+                        INSTRUMENTO LÍDER
+                    </h3>
+
+                    <p
+                        data-es="Consolidación de La Polilla como la guitarra de gama más alta y pilar sonoro en el estudio personal de Jhire."
+                        data-en="Consolidation of La Polilla as the highest-end guitar and sonic pillar in Jhire's personal studio.">
+                        Consolidación de La Polilla como la guitarra de gama más alta y pilar sonoro en el estudio personal de Jhire.
+                    </p>
                 </div>
             </div>
 
             <div class="event">
-                <div class="year">10 AGO 2026</div>
+                <div class="year" data-es="10 AGO 2026" data-en="AUG 10, 2026">10 AGO 2026</div>
                 <div>
-                    <h3>REGISTRO OFICIAL EN ARCHIVO</h3>
-                    <p>Catalogación técnica e histórica en la base de datos central JHJR System.</p>
+                    <h3
+                        data-es="REGISTRO OFICIAL EN ARCHIVO"
+                        data-en="OFFICIAL RECORD IN ARCHIVE">
+                        REGISTRO OFICIAL EN ARCHIVO
+                    </h3>
+
+                    <p
+                        data-es="Catalogación técnica e histórica en la base de datos central JHJR System."
+                        data-en="Technical and historical cataloging in the central JHJR System database.">
+                        Catalogación técnica e histórica en la base de datos central JHJR System.
+                    </p>
                 </div>
             </div>
 
@@ -204,17 +332,26 @@
 
         <section class="importance">
 
-            <h2>SIGNIFICADO Y VALOR</h2>
+            <h2
+                data-es="SIGNIFICADO Y VALOR"
+                data-en="MEANING AND VALUE">
+                SIGNIFICADO Y VALOR
+            </h2>
 
             <p>
                 <strong>JHJR // GTR // POL-005</strong>
             </p>
 
-            <p>
+            <p
+                data-es="La Polilla representa la confianza que un músico experimentado como Francisco Chirinos depositó en mí. Puede ser el instrumento más valioso en términos monetarios en cualquier catálogo comercial, pero su verdadero valor es incalculable: es un recordatorio constante de que alguien creyó en mi potencial antes de que yo mismo tuviera claro hasta dónde podía llegar."
+                data-en="La Polilla represents the trust that an experienced musician like Francisco Chirinos placed in me. It might be the most monetarily valuable instrument in any commercial catalog, but its true value is incalculable: it is a constant reminder that someone believed in my potential before I myself was clear about how far I could go.">
                 La Polilla representa la confianza que un músico experimentado como Francisco Chirinos depositó en mí. Puede ser el instrumento más valioso en términos monetarios en cualquier catálogo comercial, pero su verdadero valor es incalculable: es un recordatorio constante de que alguien creyó en mi potencial antes de que yo mismo tuviera claro hasta dónde podía llegar.
             </p>
 
-            <p class="quote">
+            <p
+                class="quote"
+                data-es="&quot;Prometo no decepcionarte.&quot;"
+                data-en="&quot;I promise not to let you down.&quot;">
                 "Prometo no decepcionarte."
             </p>
 
@@ -223,9 +360,36 @@
     </main>
 
     <footer>
-        <p>JHIRE EQUIPBOARD ARCHIVE</p>
-        <p>POL-005 // REGISTERED 2026</p>
+
+        <p data-es="JHIRE EQUIPBOARD ARCHIVE" data-en="JHIRE EQUIPBOARD ARCHIVE">
+            JHIRE EQUIPBOARD ARCHIVE
+        </p>
+
+        <p data-es="POL-005 // REGISTERED 2026" data-en="POL-005 // REGISTERED 2026">
+            POL-005 // REGISTERED 2026
+        </p>
+
     </footer>
+
+    <!-- MOTOR DE IDIOMA -->
+    <script>
+        const langBtn = document.getElementById('lang-btn');
+        let currentLang = 'es';
+
+        langBtn.addEventListener('click', () => {
+            // Cambiamos el idioma activo
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+
+            // El botón muestra el idioma actual
+            langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
+
+            // Cambiamos todos los textos traducibles (Usamos innerHTML para no romper etiquetas como <em>)
+            document.querySelectorAll('[data-en]').forEach(elemento => {
+                const text = elemento.getAttribute(`data-${currentLang}`);
+                if (text) elemento.innerHTML = text;
+            });
+        });
+    </script>
 
 </body>
 </html>

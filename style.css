@@ -182,10 +182,7 @@ main section > img:hover {
 }
 
 .guitar-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
+  padding: 0; /* Se elimina el padding del contenedor principal */
   background: #0d1216;
   border: 2px solid #27343a;
   transition: all 0.3s ease;
@@ -197,7 +194,13 @@ main section > img:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.guitar-card a {
+/* El enlace toma el control total del espacio y la estructura */
+.guitar-card a.card-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px; /* El padding se asigna al área cliqueable */
   color: inherit;
   text-decoration: none;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
 
     <!-- Icono de la pestaña -->
     <link rel="icon" type="image/png" href="../../images/piscis-icon.png">
-    
+
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,15 +21,20 @@
     <link rel="stylesheet" href="../../style.css">
 
     <style>
-        /* Estilos del Visor y Zoom para las fotos */
-        .guitar-grid img, .photo img {
+        /* Estilos del Visor y Zoom solo para la cuadrícula de fotos */
+        .guitar-grid img {
             cursor: zoom-in;
             transition: transform .15s ease, opacity .15s ease;
         }
 
-        .guitar-grid img:hover, .photo img:hover {
+        .guitar-grid img:hover {
             transform: scale(1.02);
             opacity: .9;
+        }
+
+        /* Estilos de la foto principal (sin zoom ni interacción de visor) */
+        .photo img {
+            cursor: default;
         }
 
         /* Estilos del Lightbox (Visor) */
@@ -131,7 +137,7 @@
 
 
         <!-- =========================
-             FOTO PRINCIPAL
+             FOTO PRINCIPAL (Estática, no interactiva)
         ========================== -->
 
         <section class="photo">
@@ -520,8 +526,12 @@
                         src="../../images/falcon/IMG_0067.JPG"
                         alt="Manuel Falcon - IMG 0067">
 
-                    <h3>
-                        IMG_0067
+                    <h3
+                        data-es="DETALLE DE PALA Y CLAVIJERO"
+                        data-en="HEADSTOCK AND TUNERS DETAIL">
+
+                        DETALLE DE PALA Y CLAVIJERO
+
                     </h3>
 
                 </div>
@@ -534,8 +544,12 @@
                         src="../../images/falcon/IMG_0068.JPG"
                         alt="Manuel Falcon - IMG 0068">
 
-                    <h3>
-                        IMG_0068
+                    <h3
+                        data-es="CLAVIJERO TRASERO"
+                        data-en="REAR HEADSTOCK">
+
+                        CLAVIJERO TRASERO
+
                     </h3>
 
                 </div>
@@ -548,8 +562,12 @@
                         src="../../images/falcon/IMG_0069.JPG"
                         alt="Manuel Falcon - IMG 0069">
 
-                    <h3>
-                        IMG_0069
+                    <h3
+                        data-es="MÁSTIL Y PERFIL"
+                        data-en="NECK AND PROFILE">
+
+                        MÁSTIL Y PERFIL
+
                     </h3>
 
                 </div>
@@ -562,8 +580,12 @@
                         src="../../images/falcon/IMG_0070.JPG"
                         alt="Manuel Falcon - IMG 0070">
 
-                    <h3>
-                        IMG_0070
+                    <h3
+                        data-es="DIAPASÓN Y TRASTES"
+                        data-en="FRETBOARD AND FRETS">
+
+                        DIAPASÓN Y TRASTES
+
                     </h3>
 
                 </div>
@@ -576,8 +598,12 @@
                         src="../../images/falcon/IMG_0071.JPG"
                         alt="Manuel Falcon - IMG 0071">
 
-                    <h3>
-                        IMG_0071
+                    <h3
+                        data-es="TAPA FRONTAL"
+                        data-en="FRONT TOP">
+
+                        TAPA FRONTAL
+
                     </h3>
 
                 </div>
@@ -590,8 +616,12 @@
                         src="../../images/falcon/IMG_0072.JPG"
                         alt="Manuel Falcon - IMG 0072">
 
-                    <h3>
-                        IMG_0072
+                    <h3
+                        data-es="ROSETA Y BOCA"
+                        data-en="ROSETTE AND SOUNDHOLE">
+
+                        ROSETA Y BOCA
+
                     </h3>
 
                 </div>
@@ -604,8 +634,12 @@
                         src="../../images/falcon/IMG_0073.JPG"
                         alt="Manuel Falcon - IMG 0073">
 
-                    <h3>
-                        IMG_0073
+                    <h3
+                        data-es="PUENTE Y SELLETA"
+                        data-en="BRIDGE AND SADDLE">
+
+                        PUENTE Y SELLETA
+
                     </h3>
 
                 </div>
@@ -618,8 +652,12 @@
                         src="../../images/falcon/IMG_0074.JPG"
                         alt="Manuel Falcon - IMG 0074">
 
-                    <h3>
-                        IMG_0074
+                    <h3
+                        data-es="AROS Y LATERALES"
+                        data-en="SIDE RIBS">
+
+                        AROS Y LATERALES
+
                     </h3>
 
                 </div>
@@ -632,8 +670,12 @@
                         src="../../images/falcon/IMG_0075.JPG"
                         alt="Manuel Falcon - IMG 0075">
 
-                    <h3>
-                        IMG_0075
+                    <h3
+                        data-es="FONDO DE LA GUITARRA"
+                        data-en="GUITAR BACK">
+
+                        FONDO DE LA GUITARRA
+
                     </h3>
 
                 </div>
@@ -709,8 +751,8 @@
             });
         });
 
-        // --- Motor del Lightbox (Visor de Fotos Interactivo) ---
-        const allImages = Array.from(document.querySelectorAll('.photo img, .guitar-grid img'));
+        // --- Motor del Lightbox (Visor de Fotos Interactivo - Excluye la foto principal superior) ---
+        const allImages = Array.from(document.querySelectorAll('.guitar-grid img'));
         const lightbox = document.getElementById('photo-lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxInfo = document.getElementById('lightbox-info');

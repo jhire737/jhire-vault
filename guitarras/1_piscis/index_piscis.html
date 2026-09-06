@@ -22,19 +22,23 @@
 
     <style>
         .timeline-photos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 12px;
-            margin-top: 18px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px;
         }
-
         .timeline-photos img {
-            display: block;
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border: 1px solid currentColor;
+            display:block; width:100%; height:220px; object-fit:contain; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
         }
+        .timeline-photos img:hover { transform:scale(1.02); opacity:.9; }
+        .lightbox { position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; padding:28px; background:rgba(0,0,0,.92); }
+        .lightbox.open { display:flex; }
+        .lightbox-content { position:relative; width:min(96vw,1500px); height:min(92vh,1000px); display:flex; align-items:center; justify-content:center; }
+        .lightbox-image { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; user-select:none; -webkit-user-drag:none; }
+        .lightbox-button { position:absolute; top:50%; transform:translateY(-50%); width:50px; height:50px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:34px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+        .lightbox-button:hover { background:rgba(255,255,255,.15); }
+        .lightbox-prev { left:-8px; } .lightbox-next { right:-8px; }
+        .lightbox-close { position:absolute; top:-4px; right:-4px; width:44px; height:44px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:28px; cursor:pointer; }
+        .lightbox-info { position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); padding:7px 12px; background:rgba(0,0,0,.65); color:#fff; font-size:13px; white-space:nowrap; }
+        body.lightbox-open { overflow:hidden; }
+        @media (max-width:700px) { .timeline-photos img{height:180px;} .lightbox{padding:12px;} .lightbox-content{width:100vw;height:90vh;} .lightbox-button{width:42px;height:42px;font-size:28px;} .lightbox-prev{left:2px}.lightbox-next{right:2px} }
     </style>
 </head>
 
@@ -600,90 +604,6 @@
         </section>
 
 
-        <!-- ===================================================== -->
-        <!-- REGISTRO FOTOGRÁFICO -->
-        <!-- ===================================================== -->
-
-        <section class="photo">
-
-            <h2
-                data-es="REGISTRO FOTOGRÁFICO"
-                data-en="PHOTOGRAPHIC RECORD">
-                REGISTRO FOTOGRÁFICO
-            </h2>
-
-
-            <div class="photo-grid">
-
-                <img
-                    src="../../images/pisces/2-timeline-1era-foto.jpg"
-                    alt="Piscis - Registro fotográfico">
-
-                <img
-                    src="../../images/pisces/IMG_0045.JPG"
-                    alt="Piscis - Registro fotográfico 0045">
-
-                <img
-                    src="../../images/pisces/IMG_0046.JPG"
-                    alt="Piscis - Registro fotográfico 0046">
-
-                <img
-                    src="../../images/pisces/IMG_0047.JPG"
-                    alt="Piscis - Registro fotográfico 0047">
-
-                <img
-                    src="../../images/pisces/IMG_0048.JPG"
-                    alt="Piscis - Registro fotográfico 0048">
-
-                <img
-                    src="../../images/pisces/IMG_0049.JPG"
-                    alt="Piscis - Registro fotográfico 0049">
-
-                <img
-                    src="../../images/pisces/IMG_0050.JPG"
-                    alt="Piscis - Registro fotográfico 0050">
-
-                <img
-                    src="../../images/pisces/IMG_0052.JPG"
-                    alt="Piscis - Registro fotográfico 0052">
-
-                <img
-                    src="../../images/pisces/IMG_0053.JPG"
-                    alt="Piscis - Registro fotográfico 0053">
-
-                <img
-                    src="../../images/pisces/IMG_0054.JPG"
-                    alt="Piscis - Registro fotográfico 0054">
-
-                <img
-                    src="../../images/pisces/IMG_0055.JPG"
-                    alt="Piscis - Registro fotográfico 0055">
-
-                <img
-                    src="../../images/pisces/IMG_0056.JPG"
-                    alt="Piscis - Registro fotográfico 0056">
-
-                <img
-                    src="../../images/pisces/primer-ano-piscis.jpg"
-                    alt="Piscis - Primer año">
-
-                <img
-                    src="../../images/pisces/primera-vez-con-piscis.jpg"
-                    alt="Piscis - Primera vez">
-
-                <img
-                    src="../../images/pisces/primera-vezx-con-piscis.jpg"
-                    alt="Piscis - Primera vez">
-
-            </div>
-
-        </section>
-
-
-        <!-- ===================================================== -->
-        <!-- SIGNIFICADO Y VALOR -->
-        <!-- ===================================================== -->
-
         <section class="importance">
 
             <h2
@@ -720,6 +640,21 @@
 
 
     <!-- ========================================================= -->
+    <!-- VISOR DE FOTOGRAFÍAS -->
+    <!-- ========================================================= -->
+
+    <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar">&times;</button>
+            <button class="lightbox-button lightbox-prev" id="lightbox-prev" type="button" aria-label="Foto anterior">&#10094;</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <button class="lightbox-button lightbox-next" id="lightbox-next" type="button" aria-label="Foto siguiente">&#10095;</button>
+            <div class="lightbox-info" id="lightbox-info"></div>
+        </div>
+    </div>
+
+
+    <!-- ========================================================= -->
     <!-- FOOTER -->
     <!-- ========================================================= -->
 
@@ -746,42 +681,64 @@
     <!-- ========================================================= -->
 
     <script>
-
         const langBtn = document.getElementById('lang-btn');
-
         let currentLang = 'es';
 
-
         langBtn.addEventListener('click', () => {
-
-            currentLang = currentLang === 'es'
-                ? 'en'
-                : 'es';
-
-
-            langBtn.textContent =
-                currentLang === 'es'
-                    ? 'ES'
-                    : 'EN';
-
-
-            document
-                .querySelectorAll('[data-en]')
-                .forEach(elemento => {
-
-                    const text =
-                        elemento.getAttribute(
-                            `data-${currentLang}`
-                        );
-
-                    if (text) {
-                        elemento.textContent = text;
-                    }
-
-                });
-
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
+            document.querySelectorAll('[data-en]').forEach(elemento => {
+                const text = elemento.getAttribute(`data-${currentLang}`);
+                if (text) elemento.textContent = text;
+            });
         });
 
+        const timelineImages = Array.from(document.querySelectorAll('.timeline-photos img'));
+        const lightbox = document.getElementById('photo-lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxInfo = document.getElementById('lightbox-info');
+        const closeButton = document.getElementById('lightbox-close');
+        const prevButton = document.getElementById('lightbox-prev');
+        const nextButton = document.getElementById('lightbox-next');
+        let currentPhoto = 0;
+
+        function updateLightbox() {
+            const image = timelineImages[currentPhoto];
+            if (!image) return;
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt || 'Piscis';
+            lightboxInfo.textContent = `${currentPhoto + 1} / ${timelineImages.length}`;
+        }
+        function openLightbox(index) {
+            currentPhoto = index; updateLightbox();
+            lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false');
+            document.body.classList.add('lightbox-open');
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true');
+            document.body.classList.remove('lightbox-open'); lightboxImage.src='';
+        }
+        function nextPhoto() { currentPhoto=(currentPhoto+1)%timelineImages.length; updateLightbox(); }
+        function previousPhoto() { currentPhoto=(currentPhoto-1+timelineImages.length)%timelineImages.length; updateLightbox(); }
+
+        timelineImages.forEach((image,index)=>image.addEventListener('click',()=>openLightbox(index)));
+        closeButton.addEventListener('click',closeLightbox);
+        nextButton.addEventListener('click',nextPhoto);
+        prevButton.addEventListener('click',previousPhoto);
+        lightbox.addEventListener('click',event=>{ if(event.target===lightbox) closeLightbox(); });
+        document.addEventListener('keydown',event=>{
+            if(!lightbox.classList.contains('open')) return;
+            if(event.key==='Escape') closeLightbox();
+            if(event.key==='ArrowRight') nextPhoto();
+            if(event.key==='ArrowLeft') previousPhoto();
+        });
+        let touchStartX=0;
+        lightbox.addEventListener('touchstart',event=>{ touchStartX=event.changedTouches[0].screenX; },{passive:true});
+        lightbox.addEventListener('touchend',event=>{
+            const distance=event.changedTouches[0].screenX-touchStartX;
+            if(Math.abs(distance)<50) return;
+            if(distance<0) nextPhoto(); else previousPhoto();
+        },{passive:true});
     </script>
 
 </body>

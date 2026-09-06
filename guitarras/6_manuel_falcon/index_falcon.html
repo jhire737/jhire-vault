@@ -8,64 +8,27 @@
 
     <!-- Icono de la pestaña -->
     <link rel="icon" type="image/png" href="../../images/piscis-icon.png">
-
-    <!-- Google Fonts -->
+    
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
     <!-- CSS principal -->
     <link rel="stylesheet" href="../../style.css">
 
     <style>
-        /* Estilos del Grid Fotográfico */
-        .guitar-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 24px;
-        }
-        
-        .guitar-card {
-            display: flex;
-            flex-direction: column;
-            background: rgba(0,0,0,.03);
-            border: 1px solid currentColor;
-            padding: 16px;
-        }
-
-        .guitar-card img, .photo img {
-            display: block;
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border: 1px solid currentColor;
+        /* Estilos del Visor y Zoom para las fotos */
+        .guitar-grid img, .photo img {
             cursor: zoom-in;
             transition: transform .15s ease, opacity .15s ease;
         }
 
-        .photo img {
-            height: 400px;
-            object-fit: contain;
-            background: rgba(0,0,0,.04);
-            margin: 20px 0;
-        }
-
-        .guitar-card img:hover, .photo img:hover {
+        .guitar-grid img:hover, .photo img:hover {
             transform: scale(1.02);
             opacity: .9;
-        }
-
-        .guitar-card h3 {
-            font-size: 1.1rem;
-            margin: 12px 0 8px 0;
-            text-transform: uppercase;
-        }
-
-        .guitar-card p {
-            font-size: 0.9rem;
-            margin: 0;
-            opacity: 0.8;
         }
 
         /* Estilos del Lightbox (Visor) */
@@ -80,10 +43,8 @@
         .lightbox-close { position: absolute; top: -4px; right: -4px; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.55); background: rgba(0,0,0,.55); color: #fff; font-size: 28px; cursor: pointer; }
         .lightbox-info { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); padding: 7px 12px; background: rgba(0,0,0,.65); color: #fff; font-size: 13px; white-space: nowrap; }
         body.lightbox-open { overflow: hidden; }
-        
+
         @media (max-width: 700px) { 
-            .guitar-card img { height: 200px; }
-            .photo img { height: 250px; }
             .lightbox { padding: 12px; } 
             .lightbox-content { width: 100vw; height: 90vh; } 
             .lightbox-button { width: 42px; height: 42px; font-size: 28px; } 
@@ -95,203 +56,599 @@
 
 <body>
 
-    <!-- ========================================================= -->
-    <!-- HEADER -->
-    <!-- ========================================================= -->
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header>
+
         <div class="system">
             <a href="../../index.html" style="color: inherit; text-decoration: none;">
                 JHIRE EQUIPBOARD ARCHIVE
             </a>
         </div>
+
         <div class="status">
-            <span data-es="SYSTEM ONLINE // REG. 2026" data-en="SYSTEM ONLINE // REG. 2026">
+
+            <span
+                data-es="SYSTEM ONLINE // REG. 2026"
+                data-en="SYSTEM ONLINE // REG. 2026">
                 SYSTEM ONLINE // REG. 2026
             </span>
-            <button id="lang-btn" class="lang-toggle">ES</button>
+
+            <button id="lang-btn" class="lang-toggle">
+                ES
+            </button>
+
         </div>
+
     </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
 
     <main>
 
-        <!-- ===================================================== -->
-        <!-- HERO -->
-        <!-- ===================================================== -->
+        <!-- =========================
+             HERO
+        ========================== -->
 
         <section class="hero">
-            <div class="classification" data-es="GUITARRA // GTR-002" data-en="GUITAR // GTR-002">
-                GUITARRA // GTR-002
+
+            <div
+                class="classification"
+                data-es="GUITARRA // GTR-006"
+                data-en="GUITAR // GTR-006">
+
+                GUITARRA // GTR-006
+
             </div>
-            <h1>MANUEL FALCON</h1>
-            <p class="subtitle" data-es="GUITARRA CLÁSICA TRADICIONAL" data-en="TRADITIONAL CLASSICAL GUITAR">
-                GUITARRA CLÁSICA TRADICIONAL
+
+            <h1
+                data-es="MANUEL FALCON"
+                data-en="MANUEL FALCON">
+
+                MANUEL FALCON
+
+            </h1>
+
+            <p
+                class="subtitle"
+                data-es="CLÁSICA // ACÚSTICA DE NYLON"
+                data-en="CLASSICAL // NYLON-STRING ACOUSTIC">
+
+                CLÁSICA // ACÚSTICA DE NYLON
+
             </p>
+
             <p class="serial">
-                JHJR // GTR // FAL-001
+                JHJR // GTR // FAL-006
             </p>
+
         </section>
 
 
-        <!-- ===================================================== -->
-        <!-- PORTADA -->
-        <!-- ===================================================== -->
+        <!-- =========================
+             FOTO PRINCIPAL
+        ========================== -->
 
         <section class="photo">
-            <img src="../../images/falcon/1-falcon-main.JPG" alt="Manuel Falcon - Vista principal">
+
+            <img
+                src="../../images/falcon/1-falcon-main.JPG"
+                alt="Manuel Falcon - Guitarra clásica de Jhire">
+
         </section>
 
 
-        <!-- ===================================================== -->
-        <!-- DATOS DE IDENTIFICACIÓN -->
-        <!-- ===================================================== -->
+        <!-- =========================
+             DATOS DE IDENTIFICACIÓN
+        ========================== -->
 
         <section class="specifications">
-            <h2 data-es="DATOS DE IDENTIFICACIÓN" data-en="IDENTIFICATION DATA">
+
+            <h2
+                data-es="DATOS DE IDENTIFICACIÓN"
+                data-en="IDENTIFICATION DATA">
+
                 DATOS DE IDENTIFICACIÓN
+
             </h2>
 
             <div class="data-grid">
+
                 <div>
-                    <span data-es="MARCA" data-en="BRAND">MARCA</span>
-                    <strong>Manuel Falcon</strong>
+
+                    <span
+                        data-es="MARCA"
+                        data-en="BRAND">
+
+                        MARCA
+
+                    </span>
+
+                    <strong>
+                        Manuel Falcon
+                    </strong>
+
                 </div>
+
+
                 <div>
-                    <span data-es="TIPO" data-en="TYPE">TIPO</span>
-                    <strong data-es="Guitarra Clásica" data-en="Classical Guitar">Guitarra Clásica</strong>
+
+                    <span
+                        data-es="MODELO"
+                        data-en="MODEL">
+
+                        MODELO
+
+                    </span>
+
+                    <strong
+                        data-es="Guitarra Clásica Tradicional"
+                        data-en="Traditional Classical Guitar">
+
+                        Guitarra Clásica Tradicional
+
+                    </strong>
+
                 </div>
+
+
                 <div>
-                    <span data-es="ESTADO" data-en="STATUS">ESTADO</span>
-                    <strong data-es="Restaurada / Experimental" data-en="Restored / Experimental">Restaurada / Experimental</strong>
+
+                    <span
+                        data-es="TIPO"
+                        data-en="TYPE">
+
+                        TIPO
+
+                    </span>
+
+                    <strong
+                        data-es="Acústica de Nylon"
+                        data-en="Nylon Acoustic">
+
+                        Acústica de Nylon
+
+                    </strong>
+
                 </div>
+
+
                 <div>
-                    <span data-es="ID TÉCNICO" data-en="TECHNICAL ID">ID TÉCNICO</span>
-                    <strong>JHJR//GTR//FAL-001</strong>
+
+                    <span
+                        data-es="ACABADO"
+                        data-en="FINISH">
+
+                        ACABADO
+
+                    </span>
+
+                    <strong
+                        data-es="Madera natural (Pino y Abeto)"
+                        data-en="Natural wood (Pine and Spruce)">
+
+                        Madera natural (Pino y Abeto)
+
+                    </strong>
+
                 </div>
+
+
+                <div>
+
+                    <span
+                        data-es="FABRICACIÓN"
+                        data-en="MANUFACTURE">
+
+                        FABRICACIÓN
+
+                    </span>
+
+                    <strong
+                        data-es="Desconocida"
+                        data-en="Unknown">
+
+                        Desconocida
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="ADQUISICIÓN"
+                        data-en="ACQUISITION">
+
+                        ADQUISICIÓN
+
+                    </span>
+
+                    <strong
+                        data-es="2023 (Rescate en taller)"
+                        data-en="2023 (Workshop rescue)">
+
+                        2023 (Rescate en taller)
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="PRECIO DE ORIGEN"
+                        data-en="ORIGIN PRICE">
+
+                        PRECIO DE ORIGEN
+
+                    </span>
+
+                    <strong
+                        data-es="Rescate por reparación no reclamada"
+                        data-en="Unclaimed repair rescue">
+
+                        Rescate por reparación no reclamada
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="PROCEDENCIA"
+                        data-en="SOURCE">
+
+                        PROCEDENCIA
+
+                    </span>
+
+                    <strong
+                        data-es="Taller de reparación local"
+                        data-en="Local repair workshop">
+
+                        Taller de reparación local
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="ESTADO"
+                        data-en="STATUS">
+
+                        ESTADO
+
+                    </span>
+
+                    <strong
+                        data-es="Activa / Operativa de batalla"
+                        data-en="Active / Battle-tested">
+
+                        Activa / Operativa de batalla
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="ESTATUS TÉCNICO"
+                        data-en="TECHNICAL STATUS">
+
+                        ESTATUS TÉCNICO
+
+                    </span>
+
+                    <strong
+                        data-es="Uso en calles (2024-2026) / Cuerdas D'Addario EJ46"
+                        data-en="Street use (2024-2026) / D'Addario EJ46 Strings">
+
+                        Uso en calles (2024-2026) / Cuerdas D'Addario EJ46
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="VALOR SENTIMENTAL"
+                        data-en="SENTIMENTAL VALUE">
+
+                        VALOR SENTIMENTAL
+
+                    </span>
+
+                    <strong
+                        data-es="Alto (Compañera callejera)"
+                        data-en="High (Street companion)">
+
+                        Alto (Compañera callejera)
+
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        data-es="ID TÉCNICO"
+                        data-en="TECHNICAL ID">
+
+                        ID TÉCNICO
+
+                    </span>
+
+                    <strong>
+                        JHJR//GTR//FAL-006
+                    </strong>
+
+                </div>
+
             </div>
+
         </section>
 
 
-        <!-- ===================================================== -->
-        <!-- HISTORIA -->
-        <!-- ===================================================== -->
+        <!-- =========================
+             HISTORIA
+        ========================== -->
 
         <section class="history">
-            <h2 data-es="HISTORIA" data-en="HISTORY">
-                HISTORIA
+
+            <h2
+                data-es="HISTORIA Y BITÁCORA"
+                data-en="HISTORY AND LOG">
+
+                HISTORIA Y BITÁCORA
+
             </h2>
-            <p data-es="La Manuel Falcon representa un pilar singular dentro del taller y la colección. A lo largo del tiempo, este instrumento ha pasado por procesos de intervención rústica y creativa, sirviendo como lienzo para prácticas de luthería experimental, reparaciones con recursos caseros y ajustes estructurales singulares." data-en="The Manuel Falcon represents a unique pillar within the workshop and collection. Over time, this instrument has undergone rustic and creative intervention processes, serving as a canvas for experimental lutherie practices, repairs with homemade resources, and unique structural adjustments.">
-                La Manuel Falcon representa un pilar singular dentro del taller y la colección. A lo largo del tiempo, este instrumento ha pasado por procesos de intervención rústica y creativa, sirviendo como lienzo para prácticas de luthería experimental, reparaciones con recursos caseros y ajustes estructurales singulares.
+
+
+            <p
+                data-es="Esta guitarra la obtuve aproximadamente en 2023 y la empecé a usar hasta 2024. La historia es bastante curiosa: un chico vino con dos guitarras para que se las repare. Las reparé, pero el patita nunca me dio adelanto, jamás me dijo nada y simplemente se olvidó o nunca volvió a reclamarlas. Así que me las quedé."
+                data-en="I got this guitar around 2023 and started using it through 2024. The story is quite curious: a guy came with two guitars for me to repair. I repaired them, but the guy never gave me a deposit, never said anything, and just forgot or never returned to claim them. So I kept them.">
+
+                Esta guitarra la obtuve aproximadamente en 2023 y la empecé a usar hasta 2024. La historia es bastante curiosa: un chico vino con dos guitarras para que se las repare. Las reparé, pero el patita nunca me dio adelanto, jamás me dijo nada y simplemente se olvidó o nunca volvió a reclamarlas. Así que me las quedé.
+
             </p>
-            <p data-es="Sus detalles de reparación —como parches improvisados con palitos de helado, retazos de madera y acabados con esmalte de uñas— cuentan una historia directa de ingenio, aprendizaje y dedicación técnica en el mantenimiento de instrumentos de cuerda." data-en="Its repair details—such as improvised patches with popsicle sticks, wood scraps, and nail polish finishes—tell a direct story of ingenuity, learning, and technical dedication in string instrument maintenance.">
-                Sus detalles de reparación —como parches improvisados con palitos de helado, retazos de madera y acabados con esmalte de uñas— cuentan una historia directa de ingenio, aprendizaje y dedicación técnica en el mantenimiento de instrumentos de cuerda.
+
+
+            <p
+                data-es="Una de esas guitarras, una Villa Alta electroacústica con cutaway y EQ 7545R, se la obsequié a mi ex de ese entonces. Yo me quedé con la Manuel Falcon, que en mi opinión era mucho mejor."
+                data-en="One of those guitars, a Villa Alta electro-acoustic with a cutaway and 7545R EQ, I gifted to my ex at the time. I kept the Manuel Falcon, which in my opinion was much better.">
+
+                Una de esas guitarras, una Villa Alta electroacústica con cutaway y EQ 7545R, se la obsequié a mi ex de ese entonces. Yo me quedé con la Manuel Falcon, que en mi opinión era mucho mejor.
+
             </p>
+
+
+            <p
+                data-es="Es una guitarra clásica construida con madera de pino y abeto, equipada con un mástil un tanto gordo pero que resulta sorprendentemente cómodo al tocar. La verdad me gustó bastante el resultado de tenerla operativa."
+                data-en="It's a classical guitar built with pine and spruce wood, equipped with a somewhat fat neck that turns out to be surprisingly comfortable to play. I really liked the outcome of getting it up and running.">
+
+                Es una guitarra clásica construida con madera de pino y abeto, equipada con un mástil un tanto gordo pero que resulta sorprendentemente cómodo al tocar. La verdad me gustó bastante el resultado de tenerla operativa.
+
+            </p>
+
+
+            <p
+                data-es="Se ha convertido en mi compañera fiel de batalla, siendo la guitarra que he usado desde 2024 hasta ahora en 2026 para salir a tocar a las calles."
+                data-en="It has become my faithful battle companion, being the guitar I've used from 2024 up to now in 2026 to go out and play on the streets.">
+
+                Se ha convertido en mi compañera fiel de batalla, siendo la guitarra que he usado desde 2024 hasta ahora en 2026 para salir a tocar a las calles.
+
+            </p>
+
+
+            <p
+                data-es="Para mantenerla al 100%, le he instalado un juego de cuerdas de tensión alta, específicamente el paquete D'Addario EJ46, lo que le otorga una excelente proyección y cuerpo sonoro para el desempeño callejero."
+                data-en="To keep it at 100%, I installed a set of high-tension strings, specifically the D'Addario EJ46 pack, giving it excellent projection and sound body for street performance.">
+
+                Para mantenerla al 100%, le he instalado un juego de cuerdas de tensión alta, específicamente el paquete D'Addario EJ46, lo que le otorga una excelente proyección y cuerpo sonoro para el desempeño callejero.
+
+            </p>
+
         </section>
 
 
-        <!-- ===================================================== -->
-        <!-- MODIFICACIONES Y REPARACIONES -->
-        <!-- ===================================================== -->
-
-        <section class="modifications">
-            <h2 data-es="MODIFICACIONES Y REPARACIONES" data-en="MODIFICATIONS AND REPAIRS">
-                MODIFICACIONES Y REPARACIONES
-            </h2>
-            <ul>
-                <li data-es="Parches estructurales internos fabricados con palito de helado y retazos de madera." data-en="Internal structural patches made with a popsicle stick and wood scraps.">
-                    Parches estructurales internos fabricados con palito de helado y retazos de madera.
-                </li>
-                <li data-es="Lacado y sellado superficial aplicado con esmalte de uñas." data-en="Surface lacquering and sealing applied with nail polish.">
-                    Lacado y sellado superficial aplicado con esmalte de uñas.
-                </li>
-                <li data-es="Ajuste y revisión de la acción en el diapasón y componentes de la caja acústica." data-en="Adjustment and inspection of fretboard action and acoustic body components.">
-                    Ajuste y revisión de la acción en el diapasón y componentes de la caja acústica.
-                </li>
-            </ul>
-        </section>
-
-
-        <!-- ===================================================== -->
-        <!-- REGISTRO FOTOGRÁFICO -->
-        <!-- ===================================================== -->
+        <!-- =========================
+             REGISTRO FOTOGRÁFICO
+        ========================== -->
 
         <section class="catalog">
 
-            <h2 data-es="REGISTRO FOTOGRÁFICO" data-en="PHOTOGRAPHIC RECORD">
+            <h2
+                data-es="REGISTRO FOTOGRÁFICO"
+                data-en="PHOTOGRAPHIC RECORD">
+
                 REGISTRO FOTOGRÁFICO
+
             </h2>
+
 
             <div class="guitar-grid">
 
+
                 <!-- 01 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/1-falcon-main.JPG" alt="Manuel Falcon - Vista principal">
-                    <h3 data-es="VISTA GENERAL" data-en="GENERAL VIEW">VISTA GENERAL</h3>
-                    <p data-es="Vista principal de la Manuel Falcon" data-en="Main view of the Manuel Falcon">Vista principal de la Manuel Falcon</p>
+
+                    <img
+                        src="../../images/falcon/1-falcon-main.JPG"
+                        alt="Manuel Falcon - Vista principal">
+
+                    <h3
+                        data-es="VISTA GENERAL"
+                        data-en="GENERAL VIEW">
+
+                        VISTA GENERAL
+
+                    </h3>
+
+                    <p
+                        data-es="Vista principal de la Manuel Falcon"
+                        data-en="Main view of the Manuel Falcon">
+
+                        Vista principal de la Manuel Falcon
+
+                    </p>
+
                 </div>
+
 
                 <!-- 02 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0067.JPG" alt="Manuel Falcon - Boca de la guitarra">
-                    <h3 data-es="Boca de la guitarra" data-en="Soundhole">Boca de la guitarra</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0067.JPG"
+                        alt="Manuel Falcon - IMG 0067">
+
+                    <h3>
+                        IMG_0067
+                    </h3>
+
                 </div>
+
 
                 <!-- 03 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0068.JPG" alt="Manuel Falcon - Parche con palito de helado">
-                    <h3 data-es="Parche hecho con un palito de helado y lacado con esmalte de uñas" data-en="Patch made with a popsicle stick and lacquered with nail polish">Parche hecho con un palito de helado y lacado con esmalte de uñas</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0068.JPG"
+                        alt="Manuel Falcon - IMG 0068">
+
+                    <h3>
+                        IMG_0068
+                    </h3>
+
                 </div>
+
 
                 <!-- 04 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0069.JPG" alt="Manuel Falcon - Parte trasera de la pala">
-                    <h3 data-es="Parte trasera de la pala" data-en="Back of the headstock">Parte trasera de la pala</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0069.JPG"
+                        alt="Manuel Falcon - IMG 0069">
+
+                    <h3>
+                        IMG_0069
+                    </h3>
+
                 </div>
+
 
                 <!-- 05 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0070.JPG" alt="Manuel Falcon - Parche con retazo de madera">
-                    <h3 data-es="Parche hecho con un retazo suelto de madera" data-en="Patch made with a loose scrap of wood">Parche hecho con un retazo suelto de madera</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0070.JPG"
+                        alt="Manuel Falcon - IMG 0070">
+
+                    <h3>
+                        IMG_0070
+                    </h3>
+
                 </div>
+
 
                 <!-- 06 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0071.JPG" alt="Manuel Falcon - Marca de autenticidad">
-                    <h3 data-es="Marca de autenticidad serigrafiada" data-en="Silkscreened mark of authenticity">Marca de autenticidad serigrafiada</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0071.JPG"
+                        alt="Manuel Falcon - IMG 0071">
+
+                    <h3>
+                        IMG_0071
+                    </h3>
+
                 </div>
+
 
                 <!-- 07 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0072.JPG" alt="Manuel Falcon - Detalle del diapasón">
-                    <h3 data-es="Detalle del diapasón y trastes" data-en="Fretboard and frets detail">Detalle del diapasón y trastes</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0072.JPG"
+                        alt="Manuel Falcon - IMG 0072">
+
+                    <h3>
+                        IMG_0072
+                    </h3>
+
                 </div>
+
 
                 <!-- 08 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0073.JPG" alt="Manuel Falcon - Acción de las cuerdas">
-                    <h3 data-es="Acción de las cuerdas sobre el diapasón" data-en="String action over the fretboard">Acción de las cuerdas sobre el diapasón</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0073.JPG"
+                        alt="Manuel Falcon - IMG 0073">
+
+                    <h3>
+                        IMG_0073
+                    </h3>
+
                 </div>
+
 
                 <!-- 09 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0074.JPG" alt="Manuel Falcon - Aro lateral izquierdo">
-                    <h3 data-es="Aro lateral izquierdo" data-en="Left side rib">Aro lateral izquierdo</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0074.JPG"
+                        alt="Manuel Falcon - IMG 0074">
+
+                    <h3>
+                        IMG_0074
+                    </h3>
+
                 </div>
+
 
                 <!-- 10 -->
                 <div class="guitar-card">
-                    <img src="../../images/falcon/IMG_0075.JPG" alt="Manuel Falcon - Aro lateral derecho">
-                    <h3 data-es="Aro lateral derecho" data-en="Right side rib">Aro lateral derecho</h3>
+
+                    <img
+                        src="../../images/falcon/IMG_0075.JPG"
+                        alt="Manuel Falcon - IMG 0075">
+
+                    <h3>
+                        IMG_0075
+                    </h3>
+
                 </div>
+
 
             </div>
 
         </section>
 
+
     </main>
 
+
     <!-- ========================================================= -->
-    <!-- VISOR DE FOTOGRAFÍAS -->
+    <!-- VISOR DE FOTOGRAFÍAS (LIGHTBOX) -->
     <!-- ========================================================= -->
 
     <div class="lightbox" id="photo-lightbox" aria-hidden="true">
@@ -304,22 +661,36 @@
         </div>
     </div>
 
-    <!-- ========================================================= -->
-    <!-- FOOTER -->
-    <!-- ========================================================= -->
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
-        <p data-es="JHIRE EQUIPBOARD ARCHIVE" data-en="JHIRE EQUIPBOARD ARCHIVE">
+
+        <p
+            data-es="JHIRE EQUIPBOARD ARCHIVE"
+            data-en="JHIRE EQUIPBOARD ARCHIVE">
+
             JHIRE EQUIPBOARD ARCHIVE
+
         </p>
-        <p data-es="FAL-001 // REGISTERED 2026" data-en="FAL-001 // REGISTERED 2026">
-            FAL-001 // REGISTERED 2026
+
+
+        <p
+            data-es="FAL-006 // REGISTERED 2026"
+            data-en="FAL-006 // REGISTERED 2026">
+
+            FAL-006 // REGISTERED 2026
+
         </p>
+
     </footer>
 
-    <!-- ========================================================= -->
-    <!-- MOTOR DE IDIOMA Y VISOR DE FOTOS -->
-    <!-- ========================================================= -->
+
+    <!-- =========================
+         MOTOR DE IDIOMA Y VISOR DE FOTOS
+    ========================== -->
 
     <script>
         // --- Motor de Idioma ---
@@ -329,14 +700,16 @@
         langBtn.addEventListener('click', () => {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
+
             document.querySelectorAll('[data-en]').forEach(elemento => {
                 const text = elemento.getAttribute(`data-${currentLang}`);
-                if (text) elemento.textContent = text;
+                if (text) {
+                    elemento.innerHTML = text;
+                }
             });
         });
 
-        // --- Motor del Lightbox (Visor de fotos interactivo) ---
-        // Agrupa todas las imágenes de la portada y del catálogo en el visor con flechas
+        // --- Motor del Lightbox (Visor de Fotos Interactivo) ---
         const allImages = Array.from(document.querySelectorAll('.photo img, .guitar-grid img'));
         const lightbox = document.getElementById('photo-lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
@@ -379,7 +752,6 @@
             updateLightbox(); 
         }
 
-        // Asignar evento clic a cada imagen
         allImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
         
         closeButton.addEventListener('click', closeLightbox);
@@ -390,7 +762,7 @@
             if(event.target === lightbox) closeLightbox(); 
         });
         
-        // Navegación por teclado (Escape y Flechas)
+        // Controles por teclado (Escape y Flechas)
         document.addEventListener('keydown', event => {
             if(!lightbox.classList.contains('open')) return;
             if(event.key === 'Escape') closeLightbox();
@@ -398,7 +770,7 @@
             if(event.key === 'ArrowLeft') previousPhoto();
         });
         
-        // Navegación táctil (Swipe en móviles)
+        // Controles táctiles (Swipe en celulares)
         let touchStartX = 0;
         lightbox.addEventListener('touchstart', event => { 
             touchStartX = event.changedTouches[0].screenX; 
@@ -412,4 +784,5 @@
     </script>
 
 </body>
+
 </html>

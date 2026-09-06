@@ -34,7 +34,7 @@
             padding: 16px;
         }
 
-        .guitar-card img {
+        .guitar-card img, .photo img {
             display: block;
             width: 100%;
             height: 250px;
@@ -42,17 +42,23 @@
             border: 1px solid currentColor;
             cursor: zoom-in;
             transition: transform .15s ease, opacity .15s ease;
-            margin-bottom: 16px;
         }
 
-        .guitar-card img:hover {
+        .photo img {
+            height: 400px;
+            object-fit: contain;
+            background: rgba(0,0,0,.04);
+            margin: 20px 0;
+        }
+
+        .guitar-card img:hover, .photo img:hover {
             transform: scale(1.02);
             opacity: .9;
         }
 
         .guitar-card h3 {
             font-size: 1.1rem;
-            margin: 0 0 8px 0;
+            margin: 12px 0 8px 0;
             text-transform: uppercase;
         }
 
@@ -63,24 +69,26 @@
         }
 
         /* Estilos del Lightbox (Visor) */
-        .lightbox { position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; padding:28px; background:rgba(0,0,0,.92); }
-        .lightbox.open { display:flex; }
-        .lightbox-content { position:relative; width:min(96vw,1500px); height:min(92vh,1000px); display:flex; align-items:center; justify-content:center; }
-        .lightbox-image { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; user-select:none; -webkit-user-drag:none; }
-        .lightbox-button { position:absolute; top:50%; transform:translateY(-50%); width:50px; height:50px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:34px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
-        .lightbox-button:hover { background:rgba(255,255,255,.15); }
-        .lightbox-prev { left:-8px; } .lightbox-next { right:-8px; }
-        .lightbox-close { position:absolute; top:-4px; right:-4px; width:44px; height:44px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:28px; cursor:pointer; }
-        .lightbox-info { position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); padding:7px 12px; background:rgba(0,0,0,.65); color:#fff; font-size:13px; white-space:nowrap; }
-        body.lightbox-open { overflow:hidden; }
+        .lightbox { position: fixed; inset: 0; z-index: 9999; display: none; align-items: center; justify-content: center; padding: 28px; background: rgba(0,0,0,.92); }
+        .lightbox.open { display: flex; }
+        .lightbox-content { position: relative; width: min(96vw, 1500px); height: min(92vh, 1000px); display: flex; align-items: center; justify-content: center; }
+        .lightbox-image { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; user-select: none; -webkit-user-drag: none; }
+        .lightbox-button { position: absolute; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border: 1px solid rgba(255,255,255,.55); background: rgba(0,0,0,.55); color: #fff; font-size: 34px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .lightbox-button:hover { background: rgba(255,255,255,.15); }
+        .lightbox-prev { left: -8px; } 
+        .lightbox-next { right: -8px; }
+        .lightbox-close { position: absolute; top: -4px; right: -4px; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.55); background: rgba(0,0,0,.55); color: #fff; font-size: 28px; cursor: pointer; }
+        .lightbox-info { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); padding: 7px 12px; background: rgba(0,0,0,.65); color: #fff; font-size: 13px; white-space: nowrap; }
+        body.lightbox-open { overflow: hidden; }
         
-        @media (max-width:700px) { 
+        @media (max-width: 700px) { 
             .guitar-card img { height: 200px; }
-            .lightbox { padding:12px; } 
-            .lightbox-content { width:100vw; height:90vh; } 
-            .lightbox-button { width:42px; height:42px; font-size:28px; } 
-            .lightbox-prev { left:2px; }
-            .lightbox-next { right:2px; } 
+            .photo img { height: 250px; }
+            .lightbox { padding: 12px; } 
+            .lightbox-content { width: 100vw; height: 90vh; } 
+            .lightbox-button { width: 42px; height: 42px; font-size: 28px; } 
+            .lightbox-prev { left: 2px; }
+            .lightbox-next { right: 2px; } 
         }
     </style>
 </head>
@@ -116,13 +124,92 @@
                 GUITARRA // GTR-002
             </div>
             <h1>MANUEL FALCON</h1>
-            <p class="subtitle" data-es="GUITARRA CLÁSICA" data-en="CLASSICAL GUITAR">
-                GUITARRA CLÁSICA
+            <p class="subtitle" data-es="GUITARRA CLÁSICA TRADICIONAL" data-en="TRADITIONAL CLASSICAL GUITAR">
+                GUITARRA CLÁSICA TRADICIONAL
             </p>
             <p class="serial">
                 JHJR // GTR // FAL-001
             </p>
         </section>
+
+
+        <!-- ===================================================== -->
+        <!-- PORTADA -->
+        <!-- ===================================================== -->
+
+        <section class="photo">
+            <img src="../../images/falcon/1-falcon-main.JPG" alt="Manuel Falcon - Vista principal">
+        </section>
+
+
+        <!-- ===================================================== -->
+        <!-- DATOS DE IDENTIFICACIÓN -->
+        <!-- ===================================================== -->
+
+        <section class="specifications">
+            <h2 data-es="DATOS DE IDENTIFICACIÓN" data-en="IDENTIFICATION DATA">
+                DATOS DE IDENTIFICACIÓN
+            </h2>
+
+            <div class="data-grid">
+                <div>
+                    <span data-es="MARCA" data-en="BRAND">MARCA</span>
+                    <strong>Manuel Falcon</strong>
+                </div>
+                <div>
+                    <span data-es="TIPO" data-en="TYPE">TIPO</span>
+                    <strong data-es="Guitarra Clásica" data-en="Classical Guitar">Guitarra Clásica</strong>
+                </div>
+                <div>
+                    <span data-es="ESTADO" data-en="STATUS">ESTADO</span>
+                    <strong data-es="Restaurada / Experimental" data-en="Restored / Experimental">Restaurada / Experimental</strong>
+                </div>
+                <div>
+                    <span data-es="ID TÉCNICO" data-en="TECHNICAL ID">ID TÉCNICO</span>
+                    <strong>JHJR//GTR//FAL-001</strong>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===================================================== -->
+        <!-- HISTORIA -->
+        <!-- ===================================================== -->
+
+        <section class="history">
+            <h2 data-es="HISTORIA" data-en="HISTORY">
+                HISTORIA
+            </h2>
+            <p data-es="La Manuel Falcon representa un pilar singular dentro del taller y la colección. A lo largo del tiempo, este instrumento ha pasado por procesos de intervención rústica y creativa, sirviendo como lienzo para prácticas de luthería experimental, reparaciones con recursos caseros y ajustes estructurales singulares." data-en="The Manuel Falcon represents a unique pillar within the workshop and collection. Over time, this instrument has undergone rustic and creative intervention processes, serving as a canvas for experimental lutherie practices, repairs with homemade resources, and unique structural adjustments.">
+                La Manuel Falcon representa un pilar singular dentro del taller y la colección. A lo largo del tiempo, este instrumento ha pasado por procesos de intervención rústica y creativa, sirviendo como lienzo para prácticas de luthería experimental, reparaciones con recursos caseros y ajustes estructurales singulares.
+            </p>
+            <p data-es="Sus detalles de reparación —como parches improvisados con palitos de helado, retazos de madera y acabados con esmalte de uñas— cuentan una historia directa de ingenio, aprendizaje y dedicación técnica en el mantenimiento de instrumentos de cuerda." data-en="Its repair details—such as improvised patches with popsicle sticks, wood scraps, and nail polish finishes—tell a direct story of ingenuity, learning, and technical dedication in string instrument maintenance.">
+                Sus detalles de reparación —como parches improvisados con palitos de helado, retazos de madera y acabados con esmalte de uñas— cuentan una historia directa de ingenio, aprendizaje y dedicación técnica en el mantenimiento de instrumentos de cuerda.
+            </p>
+        </section>
+
+
+        <!-- ===================================================== -->
+        <!-- MODIFICACIONES Y REPARACIONES -->
+        <!-- ===================================================== -->
+
+        <section class="modifications">
+            <h2 data-es="MODIFICACIONES Y REPARACIONES" data-en="MODIFICATIONS AND REPAIRS">
+                MODIFICACIONES Y REPARACIONES
+            </h2>
+            <ul>
+                <li data-es="Parches estructurales internos fabricados con palito de helado y retazos de madera." data-en="Internal structural patches made with a popsicle stick and wood scraps.">
+                    Parches estructurales internos fabricados con palito de helado y retazos de madera.
+                </li>
+                <li data-es="Lacado y sellado superficial aplicado con esmalte de uñas." data-en="Surface lacquering and sealing applied with nail polish.">
+                    Lacado y sellado superficial aplicado con esmalte de uñas.
+                </li>
+                <li data-es="Ajuste y revisión de la acción en el diapasón y componentes de la caja acústica." data-en="Adjustment and inspection of fretboard action and acoustic body components.">
+                    Ajuste y revisión de la acción en el diapasón y componentes de la caja acústica.
+                </li>
+            </ul>
+        </section>
+
 
         <!-- ===================================================== -->
         <!-- REGISTRO FOTOGRÁFICO -->
@@ -139,84 +226,62 @@
                 <!-- 01 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/1-falcon-main.JPG" alt="Manuel Falcon - Vista principal">
-                    <h3 data-es="VISTA GENERAL" data-en="GENERAL VIEW">
-                        VISTA GENERAL
-                    </h3>
-                    <p data-es="Vista principal de la Manuel Falcon" data-en="Main view of the Manuel Falcon">
-                        Vista principal de la Manuel Falcon
-                    </p>
+                    <h3 data-es="VISTA GENERAL" data-en="GENERAL VIEW">VISTA GENERAL</h3>
+                    <p data-es="Vista principal de la Manuel Falcon" data-en="Main view of the Manuel Falcon">Vista principal de la Manuel Falcon</p>
                 </div>
 
                 <!-- 02 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0067.JPG" alt="Manuel Falcon - Boca de la guitarra">
-                    <h3 data-es="Boca de la guitarra" data-en="Soundhole">
-                        Boca de la guitarra
-                    </h3>
+                    <h3 data-es="Boca de la guitarra" data-en="Soundhole">Boca de la guitarra</h3>
                 </div>
 
                 <!-- 03 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0068.JPG" alt="Manuel Falcon - Parche con palito de helado">
-                    <h3 data-es="Parche hecho con un palito de helado y lacado con esmalte de uñas" data-en="Patch made with a popsicle stick and lacquered with nail polish">
-                        Parche hecho con un palito de helado y lacado con esmalte de uñas
-                    </h3>
+                    <h3 data-es="Parche hecho con un palito de helado y lacado con esmalte de uñas" data-en="Patch made with a popsicle stick and lacquered with nail polish">Parche hecho con un palito de helado y lacado con esmalte de uñas</h3>
                 </div>
 
                 <!-- 04 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0069.JPG" alt="Manuel Falcon - Parte trasera de la pala">
-                    <h3 data-es="Parte trasera de la pala" data-en="Back of the headstock">
-                        Parte trasera de la pala
-                    </h3>
+                    <h3 data-es="Parte trasera de la pala" data-en="Back of the headstock">Parte trasera de la pala</h3>
                 </div>
 
                 <!-- 05 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0070.JPG" alt="Manuel Falcon - Parche con retazo de madera">
-                    <h3 data-es="Parche hecho con un retazo suelto de madera" data-en="Patch made with a loose scrap of wood">
-                        Parche hecho con un retazo suelto de madera
-                    </h3>
+                    <h3 data-es="Parche hecho con un retazo suelto de madera" data-en="Patch made with a loose scrap of wood">Parche hecho con un retazo suelto de madera</h3>
                 </div>
 
                 <!-- 06 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0071.JPG" alt="Manuel Falcon - Marca de autenticidad">
-                    <h3 data-es="Marca de autenticidad serigrafiada" data-en="Silkscreened mark of authenticity">
-                        Marca de autenticidad serigrafiada
-                    </h3>
+                    <h3 data-es="Marca de autenticidad serigrafiada" data-en="Silkscreened mark of authenticity">Marca de autenticidad serigrafiada</h3>
                 </div>
 
                 <!-- 07 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0072.JPG" alt="Manuel Falcon - Detalle del diapasón">
-                    <h3 data-es="Detalle del diapasón y trastes" data-en="Fretboard and frets detail">
-                        Detalle del diapasón y trastes
-                    </h3>
+                    <h3 data-es="Detalle del diapasón y trastes" data-en="Fretboard and frets detail">Detalle del diapasón y trastes</h3>
                 </div>
 
                 <!-- 08 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0073.JPG" alt="Manuel Falcon - Acción de las cuerdas">
-                    <h3 data-es="Acción de las cuerdas sobre el diapasón" data-en="String action over the fretboard">
-                        Acción de las cuerdas sobre el diapasón
-                    </h3>
+                    <h3 data-es="Acción de las cuerdas sobre el diapasón" data-en="String action over the fretboard">Acción de las cuerdas sobre el diapasón</h3>
                 </div>
 
                 <!-- 09 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0074.JPG" alt="Manuel Falcon - Aro lateral izquierdo">
-                    <h3 data-es="Aro lateral izquierdo" data-en="Left side rib">
-                        Aro lateral izquierdo
-                    </h3>
+                    <h3 data-es="Aro lateral izquierdo" data-en="Left side rib">Aro lateral izquierdo</h3>
                 </div>
 
                 <!-- 10 -->
                 <div class="guitar-card">
                     <img src="../../images/falcon/IMG_0075.JPG" alt="Manuel Falcon - Aro lateral derecho">
-                    <h3 data-es="Aro lateral derecho" data-en="Right side rib">
-                        Aro lateral derecho
-                    </h3>
+                    <h3 data-es="Aro lateral derecho" data-en="Right side rib">Aro lateral derecho</h3>
                 </div>
 
             </div>
@@ -270,8 +335,9 @@
             });
         });
 
-        // --- Motor del Lightbox (Visor de fotos) ---
-        const gridImages = Array.from(document.querySelectorAll('.guitar-card img'));
+        // --- Motor del Lightbox (Visor de fotos interactivo) ---
+        // Agrupa todas las imágenes de la portada y del catálogo en el visor con flechas
+        const allImages = Array.from(document.querySelectorAll('.photo img, .guitar-grid img'));
         const lightbox = document.getElementById('photo-lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxInfo = document.getElementById('lightbox-info');
@@ -281,11 +347,11 @@
         let currentPhoto = 0;
 
         function updateLightbox() {
-            const image = gridImages[currentPhoto];
+            const image = allImages[currentPhoto];
             if (!image) return;
             lightboxImage.src = image.src;
-            lightboxImage.alt = image.alt || 'Fotografía de la guitarra';
-            lightboxInfo.textContent = `${currentPhoto + 1} / ${gridImages.length}`;
+            lightboxImage.alt = image.alt || 'Manuel Falcon';
+            lightboxInfo.textContent = `${currentPhoto + 1} / ${allImages.length}`;
         }
 
         function openLightbox(index) {
@@ -304,17 +370,18 @@
         }
 
         function nextPhoto() { 
-            currentPhoto = (currentPhoto + 1) % gridImages.length; 
+            currentPhoto = (currentPhoto + 1) % allImages.length; 
             updateLightbox(); 
         }
 
         function previousPhoto() { 
-            currentPhoto = (currentPhoto - 1 + gridImages.length) % gridImages.length; 
+            currentPhoto = (currentPhoto - 1 + allImages.length) % allImages.length; 
             updateLightbox(); 
         }
 
-        // Event Listeners del Lightbox
-        gridImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
+        // Asignar evento clic a cada imagen
+        allImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
+        
         closeButton.addEventListener('click', closeLightbox);
         nextButton.addEventListener('click', nextPhoto);
         prevButton.addEventListener('click', previousPhoto);
@@ -323,7 +390,7 @@
             if(event.target === lightbox) closeLightbox(); 
         });
         
-        // Navegación por teclado
+        // Navegación por teclado (Escape y Flechas)
         document.addEventListener('keydown', event => {
             if(!lightbox.classList.contains('open')) return;
             if(event.key === 'Escape') closeLightbox();
@@ -331,7 +398,7 @@
             if(event.key === 'ArrowLeft') previousPhoto();
         });
         
-        // Navegación táctil (Swipe)
+        // Navegación táctil (Swipe en móviles)
         let touchStartX = 0;
         lightbox.addEventListener('touchstart', event => { 
             touchStartX = event.changedTouches[0].screenX; 

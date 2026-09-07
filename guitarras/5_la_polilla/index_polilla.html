@@ -14,6 +14,30 @@
     
     <!-- CSS en la raíz principal -->
     <link rel="stylesheet" href="../../style.css">
+
+    <!-- CSS del Visor Interactivo (Lightbox) adaptado para galería general -->
+    <style>
+        .interactive-gallery {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px;
+        }
+        .interactive-gallery img {
+            display:block; width:100%; height:220px; object-fit:cover; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
+        }
+        .interactive-gallery img:hover { transform:scale(1.02); opacity:.9; }
+        
+        .lightbox { position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; padding:28px; background:rgba(0,0,0,.92); }
+        .lightbox.open { display:flex; }
+        .lightbox-content { position:relative; width:min(96vw,1500px); height:min(92vh,1000px); display:flex; align-items:center; justify-content:center; }
+        .lightbox-image { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; user-select:none; -webkit-user-drag:none; }
+        .lightbox-button { position:absolute; top:50%; transform:translateY(-50%); width:50px; height:50px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:34px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+        .lightbox-button:hover { background:rgba(255,255,255,.15); }
+        .lightbox-prev { left:-8px; } .lightbox-next { right:-8px; }
+        .lightbox-close { position:absolute; top:-4px; right:-4px; width:44px; height:44px; border:1px solid rgba(255,255,255,.55); background:rgba(0,0,0,.55); color:#fff; font-size:28px; cursor:pointer; }
+        .lightbox-info { position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); padding:7px 12px; background:rgba(0,0,0,.65); color:#fff; font-size:13px; white-space:nowrap; }
+        body.lightbox-open { overflow:hidden; }
+        
+        @media (max-width:700px) { .interactive-gallery img{height:180px;} .lightbox{padding:12px;} .lightbox-content{width:100vw;height:90vh;} .lightbox-button{width:42px;height:42px;font-size:28px;} .lightbox-prev{left:2px}.lightbox-next{right:2px} }
+    </style>
 </head>
 
 <body>
@@ -38,7 +62,6 @@
     <main>
 
         <section class="hero">
-
             <div class="classification"
                  data-es="GUITARRA // GTR-005"
                  data-en="GUITAR // GTR-005">
@@ -56,16 +79,23 @@
             <p class="serial">
                 JHJR // GTR // POL-005
             </p>
-
         </section>
 
+        <!-- Galería interactiva: Archivos obtenidos del repositorio en GitHub -->
         <section class="photo">
-            <!-- Fotografía de La Polilla -->
-            <img src="../../images/la-polilla/polilla-main.jpg" alt="La Polilla - guitarra de Jhire">
+            <div class="interactive-gallery">
+                <img src="../../images/polilla/IMG_0057.JPG" alt="La Polilla - IMG_0057">
+                <img src="../../images/polilla/IMG_0058.JPG" alt="La Polilla - IMG_0058">
+                <img src="../../images/polilla/IMG_0059.JPG" alt="La Polilla - IMG_0059">
+                <img src="../../images/polilla/IMG_0060.JPG" alt="La Polilla - IMG_0060">
+                <img src="../../images/polilla/IMG_0061.JPG" alt="La Polilla - IMG_0061">
+                <img src="../../images/polilla/IMG_0062.JPG" alt="La Polilla - IMG_0062">
+                <img src="../../images/polilla/IMG_0063.JPG" alt="La Polilla - IMG_0063">
+                <img src="../../images/polilla/IMG_0064.JPG" alt="La Polilla - IMG_0064">
+            </div>
         </section>
 
         <section class="specifications">
-
             <h2
                 data-es="DATOS DE IDENTIFICACIÓN"
                 data-en="IDENTIFICATION DATA">
@@ -73,43 +103,36 @@
             </h2>
 
             <div class="data-grid">
-
                 <div>
                     <span data-es="MARCA" data-en="BRAND">MARCA</span>
                     <strong>James Neligan</strong>
                 </div>
-
                 <div>
                     <span data-es="MODELO" data-en="MODEL">MODELO</span>
                     <strong>DEV-A-BBST</strong>
                 </div>
-
                 <div>
                     <span data-es="TIPO" data-en="TYPE">TIPO</span>
                     <strong data-es="Acústica Concerto / Caoba" data-en="Concert Acoustic / Mahogany">
                         Acústica Concerto / Caoba
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="ACABADO" data-en="FINISH">ACABADO</span>
                     <strong data-es="Blackburst (Caoba)" data-en="Blackburst (Mahogany)">
                         Blackburst (Caoba)
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="FABRICACIÓN" data-en="MANUFACTURE">FABRICACIÓN</span>
                     <strong>≈ 2012 – 2015</strong>
                 </div>
-
                 <div>
                     <span data-es="ADQUISICIÓN" data-en="ACQUISITION">ADQUISICIÓN</span>
                     <strong data-es="Abril de 2024" data-en="April 2024">
                         Abril de 2024
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="PRECIO DE ORIGEN" data-en="ORIGINAL PRICE">
                         PRECIO DE ORIGEN
@@ -118,21 +141,18 @@
                         Obsequio (Gama Media-Baja)
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="PROCEDENCIA" data-en="SOURCE">PROCEDENCIA</span>
                     <strong data-es="Obsequio de Francisco Chirinos" data-en="Gift from Francisco Chirinos">
                         Obsequio de Francisco Chirinos
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="ESTADO" data-en="STATUS">ESTADO</span>
                     <strong data-es="Activa / Gama Alta de la Colección" data-en="Active / High-End of the Collection">
                         Activa / Gama Alta de la Colección
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="ESTATUS TÉCNICO" data-en="TECHNICAL STATUS">
                         ESTATUS TÉCNICO
@@ -143,7 +163,6 @@
                         Instrumento Principal de Estudio y Presentación
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="VALOR SENTIMENTAL" data-en="SENTIMENTAL VALUE">
                         VALOR SENTIMENTAL
@@ -154,20 +173,16 @@
                         Inestimable / Alta Relevancia
                     </strong>
                 </div>
-
                 <div>
                     <span data-es="ID TÉCNICO" data-en="TECHNICAL ID">
                         ID TÉCNICO
                     </span>
                     <strong>JHJR//GTR//POL-003</strong>
                 </div>
-
             </div>
-
         </section>
 
         <section class="history">
-
             <h2 data-es="HISTORIA" data-en="HISTORY">
                 HISTORIA
             </h2>
@@ -211,7 +226,6 @@
         </section>
 
         <section class="modifications">
-
             <h2
                 data-es="NOTAS TÉCNICAS Y EQUIPAMIENTO"
                 data-en="TECHNICAL NOTES AND EQUIPMENT">
@@ -219,43 +233,35 @@
             </h2>
 
             <ul>
-
                 <li
                     data-es="Acabado especial Blackburst sobre madera de Caoba."
                     data-en="Special Blackburst finish on Mahogany wood.">
                     Acabado especial Blackburst sobre madera de Caoba.
                 </li>
-
                 <li
                     data-es="Incorporación posterior de correa personalizada para interpretación de pie."
                     data-en="Later addition of a custom strap for standing performance.">
                     Incorporación posterior de correa personalizada para interpretación de pie.
                 </li>
-
                 <li
                     data-es="Mantenimiento y calibración para máximo rendimiento acústico."
                     data-en="Maintenance and setup for maximum acoustic performance.">
                     Mantenimiento y calibración para máximo rendimiento acústico.
                 </li>
-
                 <li
                     data-es="Pendiente 1: Adquisición e implementación de estuche rígido para su protección."
                     data-en="Pending 1: Acquisition and implementation of a hard case for its protection.">
                     Pendiente 1: Adquisición e implementación de estuche rígido para su protección.
                 </li>
-
                 <li
                     data-es="Pendiente 2: Adquisición e implementación pastilla de contacto, en especifico el DiMarzio DP130 Acoustic Model, usado por Francisco en su Martin"
                     data-en="Pending 2: Acquisition and implementation of a contact pickup, specifically the DiMarzio DP130 Acoustic Model, used by Francisco on his Martin">
                     Pendiente 2: Adquisición e implementación pastilla de contacto, en especifico el DiMarzio DP130 Acoustic Model, usado por Francisco en su Martin
                 </li>
-
             </ul>
-
         </section>
 
         <section class="timeline">
-
             <h2 data-es="LÍNEA DE TIEMPO" data-en="TIMELINE">
                 LÍNEA DE TIEMPO
             </h2>
@@ -268,7 +274,6 @@
                         data-en="THE MEETING IN MIRAFLORES">
                         EL ENCUENTRO EN MIRAFLORES
                     </h3>
-
                     <p
                         data-es="Encuentro con el músico Francisco Chirinos tras una sesión callejera con Orión. Conversaciones sobre blues, Beatles y slides caseros."
                         data-en="Meeting with musician Francisco Chirinos after a street session with Orión. Conversations about blues, Beatles, and homemade slides.">
@@ -285,7 +290,6 @@
                         data-en="ARRIVAL AND HANDOVER IN CHORRILLOS">
                         LLEGADA Y ENTREGA EN CHORRILLOS
                     </h3>
-
                     <p
                         data-es="Visita a Chorrillos junto a mi madre. Charla sobre Ravi Shankar, interpretación de &quot;The House of the Rising Sun&quot; y entrega oficial de la guitarra."
                         data-en="Visit to Chorrillos with my mother. Chat about Ravi Shankar, performance of &quot;The House of the Rising Sun&quot;, and official handover of the guitar.">
@@ -302,7 +306,6 @@
                         data-en="LEAD INSTRUMENT">
                         INSTRUMENTO LÍDER
                     </h3>
-
                     <p
                         data-es="Consolidación de La Polilla como la guitarra de gama más alta y pilar sonoro en el estudio personal de Jhire."
                         data-en="Consolidation of La Polilla as the highest-end guitar and sonic pillar in Jhire's personal studio.">
@@ -319,7 +322,6 @@
                         data-en="OFFICIAL RECORD IN ARCHIVE">
                         REGISTRO OFICIAL EN ARCHIVO
                     </h3>
-
                     <p
                         data-es="Catalogación técnica e histórica en la base de datos central JHJR System."
                         data-en="Technical and historical cataloging in the central JHJR System database.">
@@ -327,11 +329,9 @@
                     </p>
                 </div>
             </div>
-
         </section>
 
         <section class="importance">
-
             <h2
                 data-es="SIGNIFICADO Y VALOR"
                 data-en="MEANING AND VALUE">
@@ -354,41 +354,118 @@
                 data-en="&quot;I promise not to let you down.&quot;">
                 "Prometo no decepcionarte."
             </p>
-
         </section>
 
     </main>
 
-    <footer>
+    <!-- ========================================================= -->
+    <!-- VISOR DE FOTOGRAFÍAS -->
+    <!-- ========================================================= -->
 
+    <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar">&times;</button>
+            <button class="lightbox-button lightbox-prev" id="lightbox-prev" type="button" aria-label="Foto anterior">&#10094;</button>
+            <img class="lightbox-image" id="lightbox-image" src="" alt="">
+            <button class="lightbox-button lightbox-next" id="lightbox-next" type="button" aria-label="Foto siguiente">&#10095;</button>
+            <div class="lightbox-info" id="lightbox-info"></div>
+        </div>
+    </div>
+
+    <footer>
         <p data-es="JHIRE EQUIPBOARD ARCHIVE" data-en="JHIRE EQUIPBOARD ARCHIVE">
             JHIRE EQUIPBOARD ARCHIVE
         </p>
-
         <p data-es="POL-005 // REGISTERED 2026" data-en="POL-005 // REGISTERED 2026">
             POL-005 // REGISTERED 2026
         </p>
-
     </footer>
 
-    <!-- MOTOR DE IDIOMA -->
+    <!-- ========================================================= -->
+    <!-- MOTOR DE IDIOMA Y VISOR DE IMÁGENES -->
+    <!-- ========================================================= -->
     <script>
+        // --- 1. LÓGICA DE IDIOMA ---
         const langBtn = document.getElementById('lang-btn');
         let currentLang = 'es';
 
         langBtn.addEventListener('click', () => {
-            // Cambiamos el idioma activo
             currentLang = currentLang === 'es' ? 'en' : 'es';
-
-            // El botón muestra el idioma actual
             langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
 
-            // Cambiamos todos los textos traducibles (Usamos innerHTML para no romper etiquetas como <em>)
             document.querySelectorAll('[data-en]').forEach(elemento => {
                 const text = elemento.getAttribute(`data-${currentLang}`);
                 if (text) elemento.innerHTML = text;
             });
         });
+
+        // --- 2. LÓGICA DEL VISOR INTERACTIVO ---
+        const galleryImages = Array.from(document.querySelectorAll('.interactive-gallery img'));
+        const lightbox = document.getElementById('photo-lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxInfo = document.getElementById('lightbox-info');
+        const closeButton = document.getElementById('lightbox-close');
+        const prevButton = document.getElementById('lightbox-prev');
+        const nextButton = document.getElementById('lightbox-next');
+        let currentPhoto = 0;
+
+        function updateLightbox() {
+            const image = galleryImages[currentPhoto];
+            if (!image) return;
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt || 'La Polilla';
+            lightboxInfo.textContent = `${currentPhoto + 1} / ${galleryImages.length}`;
+        }
+        function openLightbox(index) {
+            currentPhoto = index; 
+            updateLightbox();
+            lightbox.classList.add('open'); 
+            lightbox.setAttribute('aria-hidden','false');
+            document.body.classList.add('lightbox-open');
+        }
+        function closeLightbox() {
+            lightbox.classList.remove('open'); 
+            lightbox.setAttribute('aria-hidden','true');
+            document.body.classList.remove('lightbox-open'); 
+            lightboxImage.src='';
+        }
+        function nextPhoto() { 
+            currentPhoto = (currentPhoto + 1) % galleryImages.length; 
+            updateLightbox(); 
+        }
+        function previousPhoto() { 
+            currentPhoto = (currentPhoto - 1 + galleryImages.length) % galleryImages.length; 
+            updateLightbox(); 
+        }
+
+        // Event Listeners para la interacción del Lightbox
+        galleryImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
+        closeButton.addEventListener('click', closeLightbox);
+        nextButton.addEventListener('click', nextPhoto);
+        prevButton.addEventListener('click', previousPhoto);
+        
+        lightbox.addEventListener('click', event => { 
+            if(event.target === lightbox) closeLightbox(); 
+        });
+        
+        document.addEventListener('keydown', event => {
+            if(!lightbox.classList.contains('open')) return;
+            if(event.key === 'Escape') closeLightbox();
+            if(event.key === 'ArrowRight') nextPhoto();
+            if(event.key === 'ArrowLeft') previousPhoto();
+        });
+
+        // Soporte táctil (Swipe)
+        let touchStartX = 0;
+        lightbox.addEventListener('touchstart', event => { 
+            touchStartX = event.changedTouches[0].screenX; 
+        }, {passive:true});
+        
+        lightbox.addEventListener('touchend', event => {
+            const distance = event.changedTouches[0].screenX - touchStartX;
+            if(Math.abs(distance) < 50) return;
+            if(distance < 0) nextPhoto(); else previousPhoto();
+        }, {passive:true});
     </script>
 
 </body>

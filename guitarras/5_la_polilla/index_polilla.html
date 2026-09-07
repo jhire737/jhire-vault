@@ -15,15 +15,15 @@
     <!-- CSS en la raíz principal -->
     <link rel="stylesheet" href="../../style.css">
 
-    <!-- CSS del Visor Interactivo (Lightbox) adaptado para galería general -->
+    <!-- CSS del Visor Interactivo (Lightbox) adaptado -->
     <style>
-        .interactive-gallery {
+        .timeline-photos {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px;
         }
-        .interactive-gallery img {
-            display:block; width:100%; height:220px; object-fit:cover; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
+        .timeline-photos img {
+            display:block; width:100%; height:220px; object-fit:contain; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
         }
-        .interactive-gallery img:hover { transform:scale(1.02); opacity:.9; }
+        .timeline-photos img:hover { transform:scale(1.02); opacity:.9; }
         
         .lightbox { position:fixed; inset:0; z-index:9999; display:none; align-items:center; justify-content:center; padding:28px; background:rgba(0,0,0,.92); }
         .lightbox.open { display:flex; }
@@ -36,7 +36,7 @@
         .lightbox-info { position:absolute; left:50%; bottom:-6px; transform:translateX(-50%); padding:7px 12px; background:rgba(0,0,0,.65); color:#fff; font-size:13px; white-space:nowrap; }
         body.lightbox-open { overflow:hidden; }
         
-        @media (max-width:700px) { .interactive-gallery img{height:180px;} .lightbox{padding:12px;} .lightbox-content{width:100vw;height:90vh;} .lightbox-button{width:42px;height:42px;font-size:28px;} .lightbox-prev{left:2px}.lightbox-next{right:2px} }
+        @media (max-width:700px) { .timeline-photos img{height:180px;} .lightbox{padding:12px;} .lightbox-content{width:100vw;height:90vh;} .lightbox-button{width:42px;height:42px;font-size:28px;} .lightbox-prev{left:2px}.lightbox-next{right:2px} }
     </style>
 </head>
 
@@ -81,18 +81,9 @@
             </p>
         </section>
 
-        <!-- Galería interactiva: Archivos obtenidos del repositorio en GitHub -->
+        <!-- Portada Principal -->
         <section class="photo">
-            <div class="interactive-gallery">
-                <img src="../../images/polilla/IMG_0057.JPG" alt="La Polilla - IMG_0057">
-                <img src="../../images/polilla/IMG_0058.JPG" alt="La Polilla - IMG_0058">
-                <img src="../../images/polilla/IMG_0059.JPG" alt="La Polilla - IMG_0059">
-                <img src="../../images/polilla/IMG_0060.JPG" alt="La Polilla - IMG_0060">
-                <img src="../../images/polilla/IMG_0061.JPG" alt="La Polilla - IMG_0061">
-                <img src="../../images/polilla/IMG_0062.JPG" alt="La Polilla - IMG_0062">
-                <img src="../../images/polilla/IMG_0063.JPG" alt="La Polilla - IMG_0063">
-                <img src="../../images/polilla/IMG_0064.JPG" alt="La Polilla - IMG_0064">
-            </div>
+            <img src="../../images/polilla/IMG_0060.JPG" alt="La Polilla - James Neligan DEV-A-BBST">
         </section>
 
         <section class="specifications">
@@ -194,8 +185,8 @@
             </p>
 
             <p
-                data-es='Ese músico era Francisco Chirinos, un blusero de Chorrillos que suele presentarse en el Gato Tulipán, en Barranco. Terminamos conversando durante largo rato sobre Bob Dylan, The Beatles, blues e historias de carretera; incluso me enseñó cómo fabricar un slide casero. Francisco también había tocado en la calle (según lo que oí) y probablemente encontró algo familiar en mí. En aquella época yo tocaba guitarra y armónica, e interpretaba <em>"El baile de los que sobran"</em> usando una armónica para reemplazar el arreglo de sintetizador/armonio.'
-                data-en='That musician was Francisco Chirinos, a bluesman from Chorrillos who usually performs at Gato Tulipán, in Barranco. We ended up talking for a long time about Bob Dylan, The Beatles, blues, and road stories; he even taught me how to make a homemade slide. Francisco had also played on the street (from what I heard) and probably found something familiar in me. At that time I played guitar and harmonica, and I performed <em>"El baile de los que sobran"</em> using a harmonica to replace the synthesizer/harmonium arrangement.'>
+                data-es='Ese músico era Francisco Chirinos, un blusero de Chorrillos que suele presentarse en el Gato Tulipán, en Barranco. Terminamos conversando durante largo rato sobre Bob Dylan, The Beatles, blues e historias de carretera; incluso me enseñó cómo fabricar un slide casero. Francisco también había tocado en la calle (según lo que oí) y probablemente encontró algo familiar en mí. En aquella época yo tocaba guitarra y armónica, e interpretaba "El baile de los que sobran" usando una armónica para reemplazar el arreglo de sintetizador/armonio.'
+                data-en='That musician was Francisco Chirinos, a bluesman from Chorrillos who usually performs at Gato Tulipán, in Barranco. We ended up talking for a long time about Bob Dylan, The Beatles, blues, and road stories; he even taught me how to make a homemade slide. Francisco had also played on the street (from what I heard) and probably found something familiar in me. At that time I played guitar and harmonica, and I performed "El baile de los que sobran" using a harmonica to replace the synthesizer/harmonium arrangement.'>
                 Ese músico era Francisco Chirinos, un blusero de Chorrillos que suele presentarse en el Gato Tulipán, en Barranco. Terminamos conversando durante largo rato sobre Bob Dylan, The Beatles, blues e historias de carretera; incluso me enseñó cómo fabricar un slide casero. Francisco también había tocado en la calle (según lo que oí) y probablemente encontró algo familiar en mí. En aquella época yo tocaba guitarra y armónica, e interpretaba <em>"El baile de los que sobran"</em> usando una armónica para reemplazar el arreglo de sintetizador/armonio.
             </p>
 
@@ -212,8 +203,8 @@
             </p>
 
             <p
-                data-es='Francisco entró a su habitación, salió con la James Neligan y me dijo simplemente: <em>"Tócala"</em>. La primera canción que interpreté con ella fue <em>"The House of the Rising Sun"</em> en la versión de The Animals, una de las favoritas de mi mamá, quien quedó gratamente sorprendida por el sonido. Tras escucharla, Francisco me dijo: <em>"Tómala. Es tuya"</em>. Sin transacciones, intercambios ni negociaciones; fue un acto puro de generosidad entre músicos.'
-                data-en='Francisco went into his room, came out with the James Neligan and simply told me: <em>"Play it"</em>. The first song I performed with it was <em>"The House of the Rising Sun"</em> in The Animals&apos; version, one of my mom&apos;s favorites, who was pleasantly surprised by the sound. After listening to it, Francisco told me: <em>"Take it. It's yours"</em>. No transactions, exchanges, or negotiations; it was a pure act of generosity between musicians.'>
+                data-es='Francisco entró a su habitación, salió con la James Neligan y me dijo simplemente: "Tócala". La primera canción que interpreté con ella fue "The House of the Rising Sun" en la versión de The Animals, una de las favoritas de mi mamá, quien quedó gratamente sorprendida por el sonido. Tras escucharla, Francisco me dijo: "Tómala. Es tuya". Sin transacciones, intercambios ni negociaciones; fue un acto puro de generosidad entre músicos.'
+                data-en='Francisco went into his room, came out with the James Neligan and simply told me: "Play it". The first song I performed with it was "The House of the Rising Sun" in The Animals&apos; version, one of my mom&apos;s favorites, who was pleasantly surprised by the sound. After listening to it, Francisco told me: "Take it. It&apos;s yours". No transactions, exchanges, or negotiations; it was a pure act of generosity between musicians.'>
                 Francisco entró a su habitación, salió con la James Neligan y me dijo simplemente: <em>"Tócala"</em>. La primera canción que interpreté con ella fue <em>"The House of the Rising Sun"</em> en la versión de The Animals, una de las favoritas de mi mamá, quien quedó gratamente sorprendida por el sonido. Tras escucharla, Francisco me dijo: <em>"Tómala. Es tuya"</em>. Sin transacciones, intercambios ni negociaciones; fue un acto puro de generosidad entre músicos.
             </p>
 
@@ -327,6 +318,16 @@
                         data-en="Technical and historical cataloging in the central JHJR System database.">
                         Catalogación técnica e histórica en la base de datos central JHJR System.
                     </p>
+
+                    <!-- Galería de imágenes dentro del timeline igual que en Piscis -->
+                    <div class="timeline-photos">
+                        <img src="../../images/polilla/IMG_0058.JPG" alt="La Polilla - IMG_0058">
+                        <img src="../../images/polilla/IMG_0060.JPG" alt="La Polilla - IMG_0060">
+                        <img src="../../images/polilla/IMG_0061.JPG" alt="La Polilla - IMG_0061">
+                        <img src="../../images/polilla/IMG_0062.JPG" alt="La Polilla - IMG_0062">
+                        <img src="../../images/polilla/IMG_0063.JPG" alt="La Polilla - IMG_0063">
+                        <img src="../../images/polilla/IMG_0064.JPG" alt="La Polilla - IMG_0064">
+                    </div>
                 </div>
             </div>
         </section>
@@ -400,7 +401,7 @@
         });
 
         // --- 2. LÓGICA DEL VISOR INTERACTIVO ---
-        const galleryImages = Array.from(document.querySelectorAll('.interactive-gallery img'));
+        const timelineImages = Array.from(document.querySelectorAll('.timeline-photos img'));
         const lightbox = document.getElementById('photo-lightbox');
         const lightboxImage = document.getElementById('lightbox-image');
         const lightboxInfo = document.getElementById('lightbox-info');
@@ -410,11 +411,11 @@
         let currentPhoto = 0;
 
         function updateLightbox() {
-            const image = galleryImages[currentPhoto];
+            const image = timelineImages[currentPhoto];
             if (!image) return;
             lightboxImage.src = image.src;
             lightboxImage.alt = image.alt || 'La Polilla';
-            lightboxInfo.textContent = `${currentPhoto + 1} / ${galleryImages.length}`;
+            lightboxInfo.textContent = `${currentPhoto + 1} / ${timelineImages.length}`;
         }
         function openLightbox(index) {
             currentPhoto = index; 
@@ -430,16 +431,16 @@
             lightboxImage.src='';
         }
         function nextPhoto() { 
-            currentPhoto = (currentPhoto + 1) % galleryImages.length; 
+            currentPhoto = (currentPhoto + 1) % timelineImages.length; 
             updateLightbox(); 
         }
         function previousPhoto() { 
-            currentPhoto = (currentPhoto - 1 + galleryImages.length) % galleryImages.length; 
+            currentPhoto = (currentPhoto - 1 + timelineImages.length) % timelineImages.length; 
             updateLightbox(); 
         }
 
         // Event Listeners para la interacción del Lightbox
-        galleryImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
+        timelineImages.forEach((image, index) => image.addEventListener('click', () => openLightbox(index)));
         closeButton.addEventListener('click', closeLightbox);
         nextButton.addEventListener('click', nextPhoto);
         prevButton.addEventListener('click', previousPhoto);

@@ -21,7 +21,7 @@
             display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px;
         }
         .interactive-gallery img {
-            display:block; width:100%; height:220px; object-fit:contain; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
+            display:block; width:100%; height:220px; object-fit:cover; background:rgba(0,0,0,.08); border:1px solid currentColor; cursor:zoom-in; transition:transform .15s ease,opacity .15s ease;
         }
         .interactive-gallery img:hover { transform:scale(1.02); opacity:.9; }
         
@@ -81,11 +81,17 @@
             </p>
         </section>
 
-        <!-- Galería interactiva: No depende del timeline -->
+        <!-- Galería interactiva: Archivos obtenidos del repositorio en GitHub -->
         <section class="photo">
             <div class="interactive-gallery">
-                <img src="../../images/la-polilla/polilla-main.jpg" alt="La Polilla - guitarra de Jhire">
-                <!-- Puedes agregar más <img> aquí si quieres más fotos de la polilla -->
+                <img src="../../images/polilla/IMG_0057.JPG" alt="La Polilla - IMG_0057">
+                <img src="../../images/polilla/IMG_0058.JPG" alt="La Polilla - IMG_0058">
+                <img src="../../images/polilla/IMG_0059.JPG" alt="La Polilla - IMG_0059">
+                <img src="../../images/polilla/IMG_0060.JPG" alt="La Polilla - IMG_0060">
+                <img src="../../images/polilla/IMG_0061.JPG" alt="La Polilla - IMG_0061">
+                <img src="../../images/polilla/IMG_0062.JPG" alt="La Polilla - IMG_0062">
+                <img src="../../images/polilla/IMG_0063.JPG" alt="La Polilla - IMG_0063">
+                <img src="../../images/polilla/IMG_0064.JPG" alt="La Polilla - IMG_0064">
             </div>
         </section>
 
@@ -353,7 +359,7 @@
     </main>
 
     <!-- ========================================================= -->
-    <!-- VISOR DE FOTOGRAFÍAS (Añadido) -->
+    <!-- VISOR DE FOTOGRAFÍAS -->
     <!-- ========================================================= -->
 
     <div class="lightbox" id="photo-lightbox" aria-hidden="true">
@@ -387,7 +393,6 @@
             currentLang = currentLang === 'es' ? 'en' : 'es';
             langBtn.textContent = currentLang === 'es' ? 'ES' : 'EN';
 
-            // Usamos innerHTML para mantener formato (ej. <em>) en La Polilla
             document.querySelectorAll('[data-en]').forEach(elemento => {
                 const text = elemento.getAttribute(`data-${currentLang}`);
                 if (text) elemento.innerHTML = text;
